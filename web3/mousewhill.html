@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>오설록_3차</title>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        section{width: 100%; height: 5000px; position: relative;}
+        section div{width: 100%; height: 1000px;}
+        
+        #section_01{background-color: indianred; }
+        #section_02{background-color: #5ccd76;}
+        #section_03{background-color: #a6cd5c;}
+        #section_04{background-color: #b75ccd;}
+        #section_05{background-color: #5ccdbc;}
+    </style>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery.mousewheel.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                $('section div').mousewheel(function(event,delta){
+                var divNum = $(this).index();
+                if(delta<0){
+                    if(divNum>=4) return false;
+                    var n = $(this).next().offset().top;
+                    $('html,body').stop().animate({'scrollTop': n },1000);
+                    }else if(delta>0){
+                    if(divNum<=0) return false;
+                    }
+                })
+            })
+        })/*마우스휠*/
+    </script>
+</head>
+<body>
+   <header>
+       
+   </header>
+    <section>
+        <div id="section_01"></div>
+        <div id="section_02"></div>
+        <div id="section_03"></div>
+        <div id="section_04"></div>
+        <div id="section_05"></div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
