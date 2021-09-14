@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keyframes 애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{overflow-y: scroll; }
+        .box{margin: 50px; position: absolute; width: 200px; height: 200px; background-color: indianred; 
+            animation-name: BoxTranslate; 
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            /*alternate는 애니메이션 실행 횟수가 2번 이상이여야 왕복이 가능하다.*/}
+            
+        @keyframes BoxTranslate{
+            0%{left: 0; top: 0;}
+            25%{ left: 500px; top: 0;}
+            50%{ left: 500px; top: 500px;}
+            75%{ left: 0; top: 500px;}
+            100%{ left: 0; top: 0;}
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="box">
+        BOX
+    </div>
+</body>
+</html>

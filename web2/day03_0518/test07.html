@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .warp{width: 100%; height: 500px;}
+        .outer{width: 200px; height: 200px; border: 5px solid #313130; float: left; margin: 100px;}
+        .inner{width: 200px; height: 200px; background-color: rosybrown; transition: transform 2s;}
+        div{font-weight: bold; font-size: 25px; color: white; text-align: center; line-height: 190px;}
+        
+        .warp:hover .inner{transform: scale(1.5);}
+        div:nth-child(2) .inner{ transition-timing-function: cubic-bezier(.82,.14,.45,-0.88);}
+        div:nth-child(3) .inner{ transition-timing-function:cubic-bezier(0,1.46,1,-0.91);}
+        div:nth-child(4) .inner{ transition-timing-function:ease-out;}
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="outer">
+            <div class="inner">ease</div>
+        </div>
+        <div class="outer">
+            <div class="inner">linear</div>
+        </div>
+        <div class="outer">
+            <div class="inner">ease-in</div>
+        </div>
+        <div class="outer">
+            <div class="inner">ease-out</div>
+        </div>
+    </div>
+    
+</body>
+</html>

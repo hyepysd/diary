@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정육면체</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{overflow-y: scroll;  }
+        section{width: 200px; height: 200px; position: relative;
+            transform-style: preserve-3d; margin: 150px auto; 
+            transform: rotateX(-30deg) rotateY(0deg);
+            animation: boxAni 3s infinite linear;
+        }
+        
+        @keyframes boxAni{
+            from{transform: rotateX(-30deg) rotateY(0deg);}
+            to{transform: rotateX(-30deg) rotateY(360deg);}
+        }
+        
+        div{width: 200px; height: 200px; position: absolute; left: 0; top: 0; font-size: 150px; text-align: center; line-height: 200px; border: 5px solid red; text-align: center; line-height: 200px; background-color: mediumvioletred; transform: rotateX(45deg) rotateY(0);}
+        
+        div:nth-child(1){ transform: rotateY(0) translateZ(200px); }
+        div:nth-child(2){ transform: rotateY(60deg) translateZ(200px); }
+        
+        div:nth-child(3){ transform: rotateY(120deg) translateZ(200px); }
+        
+        div:nth-child(4){ transform: rotateY(0) translateZ(-200px);}
+        
+        div:nth-child(5){ transform: rotateY(60deg) translateZ(-200px); }
+        
+        div:nth-child(6){ transform: rotateY(120deg) translateZ(-200px); }
+        
+    </style>
+</head>
+<body>
+   <section>
+       <div>W</div>
+       <div>I</div>
+       <div>S</div>
+       <div>D</div>
+       <div>O</div>
+       <div>M</div>
+   </section>
+</body>
+</html>

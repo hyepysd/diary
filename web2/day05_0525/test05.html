@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keyframes 애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{overflow-y: scroll; }
+        .wrap{width: 100px; height: 100px; line-height: 50px; text-indent: 1em; font-size: 16px margin-bottom: 2px; background-color: gold;
+        /*animation-name: menuAni;
+        animation-duration: 1s; 
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-play-state: paused;*//*애니메이션을 멈춰있도록 함*/
+        animation: BoxAni 3s infinite alternate ease-in-out paused;
+        }
+        
+        #play:checked~.wrap{
+            animation-play-state: running;}
+        
+        @keyframes BoxAni{
+            100%{margin-left: 1000px;}
+        }
+    </style>
+</head>
+<body>
+   <input type="checkbox" id="play">
+   <label for="play">PLAY</label>
+    <div class="wrap">
+      
+    </div>
+</body>
+</html>

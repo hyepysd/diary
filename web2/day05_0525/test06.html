@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keyframes 애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{overflow-y: scroll; }
+        header{position: relative; width: 100%; height: 100px; overflow: hidden;}
+        h1{position: absolute; left: 2000px;
+            animation: logoAni 1s;
+            animation-fill-mode: forwards;
+            /*forwards애니메이션이 100%지점에서 실행을 멈춤*/
+            /*backwards애니메이션이 0%지점으로 되돌아가서 실행을 멈춤
+            default 옵션은 backwards*/
+        }
+        h1>span{display: block; border: 1px solid black; }
+        h1>span:nth-child(1){transform: skewX(30deg); text-indent: 0.5em; transform-origin: left top;}
+        h1>span:nth-child(2){transform: skewX(-30deg); transform-origin: left bottom;}
+        
+        
+        @keyframes logoAni{
+            100%{left: 100px; }
+        }
+    </style>
+</head>
+<body>
+   <header>
+       <h1><span>wisdom</span><span>webdesign</span></h1>
+   </header>
+</body>
+</html>

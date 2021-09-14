@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keyframes 애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .bgImg{position: relative; background-image: url(img/clockface.jpg); width: 600px; height: 600px; }
+        .bgImg>img{position: absolute; left: 285px; 
+        /*transition: all 1s;애니메이션 제약이 존재*/}
+        
+        /*.bgImg:hover>img:nth-child(1){ }
+        .bgImg:hover>img:nth-child(2){transform: rotate(90deg);}
+        .bgImg:hover>img:nth-child(3){transform: rotate(360deg);}
+        */
+        
+        .bgImg>img:nth-child(3){
+            animation-name: aniSecond;
+            animation-duration: 60s; /*60초 동안*/
+            animation-iteration-count: infinite;/*무한으로 돌아라*/
+        }
+        @keyframes aniSecond{
+            0%{ transform: rotate(0);}
+            100%{ transform: rotate(360deg);/*360도 돌아라*/}
+        } 
+        
+        .bgImg>img:nth-child(2){
+            animation-name: aniSecond;
+            animation-duration: 360s; /*60초 동안*/
+            animation-iteration-count: infinite;/*무한으로 돌아라*/
+        }
+        
+        .bgImg>img:nth-child(3){
+           /* animation-name: aniSecond;
+            animation-duration: 3600s; 
+            animation-iteration-count: infinite; */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="bgImg">
+        <img src="./img/hourhand.png" alt="시침">
+        <img src="./img/minhand.png" alt="분침">
+        <img src="./img/sechand.png" alt="초침">
+    </div>
+</body>
+</html>

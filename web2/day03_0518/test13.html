@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        
+        .sun{margin: 100px; width: 200px; height: 200px; background-color: orangered; 
+            transition: all 4s ease; /*애니메이션 코드는 원본에다가 줘야함*/}
+        .sun div {width: 200px; height: 200px; background-color: orangered; transform: rotate(45deg); position: relative;}
+        .circle{display: block; border-radius: 200px; background-color: gold; width: 150px; height: 150px; /*transform: translateY(25px) translateX(25px);*/ position: absolute; top: 25px; left: 25px;}
+        .sun:hover{transform: rotate(360deg); /*hover에 애니메이션을 줄 경우 mouse out 시 애니메이션이 실행되지 않을 경우가 발생하므로 애니메이션을 어느곳에 주느냐에 따라 달리 움직인다는 것도 주의*/}
+        
+    </style>
+</head>
+<body>
+      <div class="sun">
+          <div><span class="circle"></span></div>
+      </div>
+</body>
+</html>

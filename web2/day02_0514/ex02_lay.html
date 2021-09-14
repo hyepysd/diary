@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>position_layout</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <style>
+        header{width: 100%; height: 200px; border-bottom: 1px solid black; position: relative;}
+        h1{position: absolute; left: 350px; top: 20px; font-size: 50px; font-family: 'Abril Fatface', cursive;}
+        .gnb{position: absolute; right: 300px; top: 10px;}
+        .gnb li{float: left;}
+        .gnb a{display: block; padding: 5px 10px;}
+        .gnb a:hover{color: #ffba00;}
+        
+        .lnb{position: absolute; left: 390px; bottom: 30px;}
+        .lnb li{float: left;}
+        .lnb a{display: block; padding: 10px 30px; font-size: 16px;    height: 50px; box-sizing: border-box;}
+        .lnb a:hover{color: #ffba00; border-bottom: 3px solid gold;}
+        
+        .wrap{width: 1200px; position: relative; margin: auto;}
+        section{ width:78%; position: absolute; left: 0; top: 30px;}
+        aside{ width:20%; position: absolute; right: 0; top: 0;}
+        
+        article{position: relative; font-size: 16px; line-height: 32px; margin-bottom: 50px; text-align: justify; letter-spacing: 1px; word-spacing: 5px;}
+        article div{padding: 0px 15px;}
+        h2{background-color: gold; padding: 10px; font-size: 24px; text-indent: 0.5em;}
+        
+        aside>label{position: absolute; display: block; width: 130px; height: 50px; background-color: gold; text-align: center; line-height: 50px;}
+        aside>label:nth-of-type(1){left: 0;}
+        aside>label:nth-of-type(2){left: 130px;}
+        aside>input{display: none;}
+        aside>input:nth-of-type(1):checked~label:nth-of-type(1){background-color: gray; color: white;}
+        aside>input:nth-of-type(2):checked~label:nth-of-type(2){background-color: gray; color: white;}
+        aside>div{position: absolute; left: 0; top: 50px; width: 260px; height: 250px; background-color: gray; display: none;}
+        aside>input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+        aside>input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+        
+        footer{width: 100%; position: relative; top: 850px; background-color: gray; height: 300px; color: white;}
+        footer>nav{position: absolute; left: 250px; }
+        footer>nav li{float: left; }
+        footer>nav a{ color: white; margin-left: 120px;}
+        footer>address{position: absolute; top: 50px; left: 250px; text-align: center; margin-left: 500px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WISDOM</h1>
+        <nav>
+            <ul class="gnb">
+               <li><a href="#">스터디룸</a></li>
+               <li><a href="#">수강료 조회</a></li>
+               <li><a href="#">온라인 상담</a></li>
+               <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="lnb">
+                <li><a href="#">아카데미 소개</a></li>
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">국비지원과정</a></li>
+                <li><a href="#">포토폴리오</a></li>
+                <li><a href="#">취업지원센터</a></li>
+                <li><a href="#">자격증정보</a></li>
+                <li><a href="#">실무자 특강</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="wrap">
+            <section>
+                <article>
+                    <h2>Contrary to popular belief,</h2> 
+                    <more> more </more>
+                    <div>
+                        Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                    </div>
+                </article>
+                <article>
+                    <h2>It is a long established</h2> 
+                    <more> more </more>
+                   <div>
+                        fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web 
+                   </div>
+                </article>
+                <article>
+                    <h2>The standard chunk</h2> 
+                    <more> more </more>
+                    <div>
+                        of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </div>
+                </article>
+            </section>
+            <aside>
+                <input type="radio" name="tab" id="tab01" checked>
+                <input type="radio" name="tab" id="tab02">
+                <label for="tab01"> 수강료 조회</label>
+                <label for="tab02"> 카톡상담</label>
+                <div>
+                   <p>수강료 조회</p>
+                    <h3>학과선택</h3>
+                    <ul>
+                        <li><a href="#">기본단과과정</a></li>
+                        <li><a href="#">취업정규과정</a></li>
+                        <li><a href="#">자격증과정</a></li>
+                    </ul>
+                    <h3>희망교육과정</h3>
+                    <p>위 학과선택에서 희망학과를 체크하시면 세부과목 선택이 가능합니다.</p>
+                </div>
+                <div>
+                   <p>카카오톡 상담신청</p>
+                    <h3>학과선택</h3>
+                    <ul>
+                        <li><a href="#">기본단과과정</a></li>
+                        <li><a href="#">취업정규과정</a></li>
+                        <li><a href="#">자격증과정</a></li>
+                    </ul>
+                    <h3>희망교육과정</h3>
+                    <p>위 학과선택에서 희망학과를 체크하시면 세부과목 선택이 가능합니다.</p>
+                </div>
+            </aside>
+        </div>
+    <footer>
+       <nav>
+           <ul>
+               <li><a href="#">아카데미 소개</a></li>
+               <li><a href="#">교육과정</a></li>
+               <li><a href="#">개인정보처리방침</a></li>
+               <li><a href="#">산학협력 현황</a></li>
+               <li><a href="#">수강료안내</a></li>
+               <li><a href="#">교육상담센터</a></li>
+               <li><a href="#">온라인결제</a></li>
+               <li><a href="#">오시는 길</a></li>
+           </ul>
+       </nav>
+        <address> 
+        굿잡아카데미컴퓨터아트학원 서울특별시 서초구 서초동 1309-8 KI타워 8층~9층 <br>
+        통신판매업번호: (주)굿잡아카데미 제 2017-서울서초-1213 호 l 사업자번호 : 745-88-00509 l 학원등록번호 : 학원등록번호 : 제12126호 <br>
+        TEL. 1588-8269 l FAX. 02-522-5540 l Email : privacy@koreaedugroup.com <br>
+        대표자 : 엄진용 l 개인정보책임자 : 신희창 l 교육담당 : 굿잡아카데미컴퓨터아트학원
+        Copyright (C) 2015 goodjobart.com. All rights reserved.
+   </address> 
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

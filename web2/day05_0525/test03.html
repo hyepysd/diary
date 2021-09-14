@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>keyframes 애니메이션</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{overflow-y: scroll; }
+        .box{margin-bottom: 10px; position: relative; width: 100px; height: 100px; background-color: indianred; 
+            animation-name: easeMover; 
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            /*alternate는 애니메이션 실행 횟수가 2번 이상이여야 왕복이 가능하다.*/}
+            
+        .box:nth-child(1){animation-timing-function: linear;}
+        .box:nth-child(2){animation-timing-function: ease;}
+        .box:nth-child(3){animation-timing-function: ease-in;}
+        .box:nth-child(4){animation-timing-function: ease-out;}
+        .box:nth-child(5){animation-timing-function: ease-in-out;}
+        .box:nth-child(6){animation-timing-function: cubic-bezier(.36,1.19,.31,-0.24);/*같은 애니메이션의 가속을 조절하면 다양한 애니메이션으로 보이도록 할 수 있음*/}
+        
+        @keyframes easeMover{
+            0%{left: 0;}
+            100%{ left: 1000px;}
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="wrap">
+       <div class="box">
+            linear
+        </div>
+        <div class="box">
+            ease <!--기본값-->
+        </div>
+        <div class="box">
+            ease-in
+        </div>
+        <div class="box">
+            ease-out
+        </div>
+        <div class="box">
+            ease-in-out
+        </div>
+        <div class="box">
+            cubic-bezie 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>main_banner애니메이션2</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Skranji:wght@700&family=Ultra&display=swap" rel="stylesheet">
+    <style>
+        aside{width: 1200px; height: 500px; background-color: #BBAA9A; margin: auto; position: relative; overflow: hidden;}
+        aside>div{position: absolute; transition: all 0.6s}
+        
+        .number{font-size: 600px; /*position: absolute;*/ top:-700px; left: -90px; color: #ccbeaf; font-family: 'Skranji', cursive;}
+        .circle{width: 300px; height: 300px; border-radius: 400px; border: 50px solid #B6554C; /*position: absolute;*/ top: 50px; left: 400px; opacity: 0.7;}
+        
+        .people{/*position: absolute;*/ left: 50px; top: 500px;}
+        .people>span{display: block; background-color: #849B95; position: absolute;}
+        .people>span:nth-child(1){ width: 250px; height: 250px; border-radius: 250px; left: 75px;}
+        .people>span:nth-child(2){ width: 400px; height: 300px; border-radius: 100px 100px 0px 0px; background-color: #849B95; top: 250px;}
+        
+        .arrow{/*position: absolute;*/ left: -210px; bottom: 100px; transform: scaleY(0.7);}
+        .arrow>span{display: block; position: absolute; border: 50px solid transparent; border-left-color: #B6554C; }
+        .arrow>span:nth-child(1){left: 0;}
+        .arrow>span:nth-child(2){left: 80px;}
+        .arrow>span:nth-child(3){left: 160px;}
+        
+        .text{font-size: 81px; text-align: center; top: 133px; left: 60px; font-family: 'Ultra', serif; line-height: 115px; color: #fff; opacity: 0; }
+        
+        aside:hover .number{top: -200px;}
+        aside:hover .circle{left: 1200px;}
+        aside:hover .people{top: 70px;}
+        aside:hover .arrow{left: 100px;}
+        aside:hover .text{opacity: 1;}
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="number">2020</div>
+        <div class="circle"></div>
+        <div class="people">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="text">transform &amp; position <br> ANIMATION</div>
+        
+    </aside>
+</body>
+</html>

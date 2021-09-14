@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        body{font-size: 16px;}
+        h1,hr,div{width: 600px; margin: auto;}
+        section{width: 300px; height: 300px; background-color: indianred; position: fixed; }
+        section:nth-of-type(1){left: 100px; top: 150px; z-index: 2;}
+        section:nth-of-type(2){background-color: goldenrod; z-index: 1;}
+    </style>
+</head>
+<body>
+    <h1>position : fixed;</h1>
+    <hr>
+    <div>
+        구조물의 위치를 브라우저 화면을 기준으로 배치 <br>
+        top, left, right, bottom, z-index 속성을 사용하여 위치를 잡는다.
+        z-index를 사용하지 않아도 html구조물이 나열된 순서대로  z-index 높아지는 특징도 있다.
+        position이 지정되지 않으면 z-indez는 제일 낮은 값을 유지한다
+    </div>
+    <section>
+        FIXED BOX
+    </section>
+    <section>
+        FIXED BOX
+    </section>
+    
+</body>
+</html>

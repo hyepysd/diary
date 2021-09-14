@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>google logo</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .google{width: 300px; height: 300px; position: relative; transition: all 1s ease; margin: 20px;}
+        .google>div{width: 150px; height: 150px; position: absolute; box-sizing: border-box;}
+        .google>div:nth-child(1){border: 50px solid #dd350d; border-radius: 300px 0 0 0; border-right: none; border-bottom: 0; transform: rotate(30deg); transform-origin: right bottom;}
+        .google>div:nth-child(2){border: 50px solid #ddb50d; border-radius: 0 0 0 300px; border-top: 0; border-right: 0; top: 150px; transform: rotate(30deg); transform-origin: right top;}
+        .google>div:nth-child(3){border: 50px solid #307224; border-radius: 0 0 0 300px; border-top: 0; border-right: 0; top: 150px; transform: rotate(-30deg); transform-origin: right top;}
+        .google>div:nth-child(4){border: 50px solid #423dc1; border-radius: 0 0 0 300px; border-top: 0; border-right: 0; top: 150px; transform: rotate(-90deg); transform-origin: right top;}
+        .google>div:nth-child(5){background-color: #423dc1; width: 150px; height: 50px; top: 105px; right: 0;}
+        
+        .google:hover{transform: scale(0.5);}
+    </style>
+</head>
+<body>
+      <div class="google">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+</body>
+</html>

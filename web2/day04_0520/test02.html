@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>transform_3D</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .outer{width: 200px; height: 200px; border: 5px solid black; float: left; margin: 100px; font-size: 30px;  
+            transform-style: preserve-3d; /*구조를 입체적으로 보이도록 함*/ 
+            perspective: 100px; /*원근감 : 숫자가 클수록 원근감이 줄어든다.*/}
+        .inner{width: 200px; height: 200px; background-color: forestgreen;}
+        .outer:nth-child(2)>div{transform: translateZ(1000px);}
+        .outer:nth-child(3)>div{transform: rotateX(45deg);}
+        .outer:nth-child(4)>div{transform: rotateY(45deg);}
+        .outer:nth-child(5)>div{transform: rotateZ(45deg);}
+        /*2D의 rotate와 같은 효과*/
+        .outer:nth-child(6)>div{transform: scaleX(0.5);}
+        .outer:nth-child(7)>div{transform: scaleY(0.5);}
+        .outer:nth-child(8)>div{transform: scaleZ(0.5); /*두께가 있다면 조절이 되지만 없으므로 확인불가*/}
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="outer">
+        <div class="inner">translateZ(1000px);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">rotateX(45deg);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">rotateY(45deg);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">rotateZ(45deg);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">scaleX(0.5);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">scaleY(0.5);</div>
+    </div>
+    <div class="outer">
+        <div class="inner">scaleZ(0.5);</div>
+    </div>
+    
+</body>
+</html>
