@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{position: fixed; left: 0px; top: -100px; width: 3000px; height: 1500px; 
+            animation: boxAni 50s infinite;}
+        
+        @keyframes boxAni{
+            25%{left: -550px; top: -100px;}    
+            50%{left: -100px; top: -500px;}    
+            75%{left: -100px; top: -100px;}    
+            100%{left: -500px; top: -500px;}    
+            
+        }
+        
+        h1{position: fixed; left: 100px; top: 100px; font-size: 400px; color: #ced5db; opacity: 0.5;
+            transform: scale(1);
+            animation: aniText 1s;
+            animation-direction: reverse;
+            /*반대로 하는 속성*/}
+            
+        @keyframes aniText{
+            100%{transform: scale(5);}
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <img src="./img/img04.jpg" alt="">
+       <h1> WISDOM </h1>
+   </div>
+</body>
+</html>

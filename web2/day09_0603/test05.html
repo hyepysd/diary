@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>2단 레이아웃</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{} 
+        .box{width: 1000px; background-color: transparent; float: right;}
+        .box:after{content: ''; display: block; clear: both;}
+        .box>div:nth-child(1){background-color: orange; width: 500px; height: 700px; float: left;} 
+        .box>div:nth-child(2){background-color: green; width: 500px; height: 700px; float: right;} 
+       .box+div{background-color: purple; width: 500px; height: 700px; float: left; } 
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+    <div></div>
+</body>
+</html>

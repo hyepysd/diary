@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>스프라이트 이미지</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        img{margin-bottom: 10px;}
+        .container{width: 1080px; margin: auto;}
+        
+        header{width: 980px; float: left;}
+        h1{font-size: 0; float: left; padding: 20px 0px;}
+        .gnb{float: right; padding: 20px 0px;}
+        .gnb li{float: left;}
+        .gnb a{display: block; padding: 10px 20px;}
+        .gnb a:hover{color: #00c4ff; background-color: #ededed;}
+        
+        .gnb>ul:nth-child(2) a{width: 32px; height: 32px; padding: 0;
+            background-image: url(img/img01.png); color: transparent;}
+        .gnb>ul:nth-child(2) li{}
+        
+        .gnb>ul:nth-child(2) li:nth-child(1) a{background-position: 0px -236px;}
+        .gnb>ul:nth-child(2) li:nth-child(2) a{background-position: -69px -236px;}
+        .gnb>ul:nth-child(2) li:nth-child(3) a{background-position: -173px -236px;}
+        
+        .topLnb{clear: both; width: 980px; }
+        .topLnb li{float: left; }
+        .topLnb a{display: block; width: 140px; height: 50px; 
+            background-image: url(img/top_gnb.png); color: transparent;}
+        .topLnb li:nth-child(1) a{background-position: 0 0;}
+        .topLnb li:nth-child(2) a{background-position: 0px -50px;}
+        .topLnb li:nth-child(3) a{background-position: 0px -100px;}
+        .topLnb li:nth-child(4) a{background-position: 0px -150px;}
+        .topLnb li:nth-child(5) a{background-position: 0px -200px;}
+        .topLnb li:nth-child(6) a{background-position: 0px -250px;}
+        .topLnb li:nth-child(7) a{background-position: 0px -300px;}
+        
+        .topLnb li:nth-child(1) a:hover{background-position: 0 -350px;}
+        .topLnb li:nth-child(2) a:hover{background-position: 0px -400px;}
+        .topLnb li:nth-child(3) a:hover{background-position: 0px -450px;}
+        .topLnb li:nth-child(4) a:hover{background-position: 0px -500px;}
+        .topLnb li:nth-child(5) a:hover{background-position: 0px -550px;}
+        .topLnb li:nth-child(6) a:hover{background-position: 0px -600px;}
+        .topLnb li:nth-child(7) a:hover{background-position: 0px -650px;}
+        
+        .topLnb li.active a{background-position: 0 -350px;}/*미리 선택해놓는 코드*/
+        
+        .bottomLnb{clear: both; width: 980px;}
+        .bottomLnb li{float: left;}
+        .bottomLnb li a{display: block; width: 98px; height: 80px; background-image: url(img/bottom_gnb.png); color: transparent;}
+        
+        .bottomLnb li:nth-child(1) a{background-position: 0 0;}
+        .bottomLnb li:nth-child(2) a{background-position: 0 -80px;}
+        .bottomLnb li:nth-child(3) a{background-position: 0 -160px;}
+        .bottomLnb li:nth-child(4) a{background-position: 0 -240px;}
+        .bottomLnb li:nth-child(5) a{background-position: 0 -320px;}
+        .bottomLnb li:nth-child(6) a{background-position: 0 -400px;}
+        .bottomLnb li:nth-child(7) a{background-position: 0 -480px;}
+        .bottomLnb li:nth-child(8) a{background-position: 0 -560px;}
+        .bottomLnb li:nth-child(9) a{background-position: 0 -640px;}
+        .bottomLnb li:nth-child(10) a{background-position: 0 -720px;}
+        
+        .bottomLnb li:nth-child(1) a:hover{background-position: 0 -800px;}
+        .bottomLnb li:nth-child(2) a:hover{background-position: 0 -880px;}
+        .bottomLnb li:nth-child(3) a:hover{background-position: 0 -960px;}
+        .bottomLnb li:nth-child(4) a:hover{background-position: 0 -1040px;}
+        .bottomLnb li:nth-child(5) a:hover{background-position: 0 -1120px;}
+        .bottomLnb li:nth-child(6) a:hover{background-position: 0 -1200px;}
+        .bottomLnb li:nth-child(7) a:hover{background-position: 0 -1280px;}
+        .bottomLnb li:nth-child(8) a:hover{background-position: 0 -1360px;}
+        .bottomLnb li:nth-child(9) a:hover{background-position: 0 -1440px;}
+        .bottomLnb li:nth-child(10) a:hover{background-position: 0 -1520px;}
+        
+        
+        .bottomLnb li.active a{background-position: 0 -1200px;}/*미리 선택해놓는 코드*/
+        
+        .panel{clear: both; width: 980px; padding: 15px; background-color: rgba(38, 38, 38, 0.69); 
+            box-sizing: border-box; /*width에서 벗어나지않게 padding을 주는 효과*/}
+        .panel:after{content: ''; display: block; clear: both; }
+        .panel ul{float: left; width: 190px;}
+        .panel li{height: 25px; line-height: 25px;}
+        .panel a{color: white; }
+        a.title{color: #00c4ff;}
+        
+        section{width: 980px; float: left;}
+        section>div:nth-child(1){width: 980px;}
+        section>div:nth-child(2){width: 795px; float: left;}
+        section>div:nth-child(3){width: 170px; float: left; margin-left: 15px;}
+        
+        aside{width: 90px; float: right; margin-top: -410px;}
+        
+        footer{width: 1080px; clear: both; margin: auto; line-height: 30px; padding: 20px 5px; background-color: #00c4ff; box-sizing: border-box; text-align: center;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>crougou <img src="./img/title.png" alt="logo"></h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                
+            </nav>
+            <nav class="topLnb">
+                <ul>
+                    <li class="active"><a href="#">지역</a></li>
+                    <li><a href="#">쇼핑</a></li>
+                    <li><a href="#">문화</a></li>
+                    <li><a href="#">여행</a></li>
+                    <li><a href="#">레저</a></li>
+                    <li><a href="#">추천</a></li>
+                    <li><a href="#">전체보기</a></li>
+                </ul>
+            </nav>
+            <nav class="bottomLnb">
+                <ul>
+                    <li><a href="#">스폐셜</a></li>
+                    <li><a href="#">의류</a></li>
+                    <li><a href="#">패션</a></li>
+                    <li><a href="#">스포츠</a></li>
+                    <li><a href="#">식품</a></li>
+                    <li class="active"><a href="#">뷰티</a></li>
+                    <li><a href="#">생활</a></li>
+                    <li><a href="#">홈데코</a></li>
+                    <li><a href="#">디지털</a></li>
+                    <li><a href="#">출산</a></li>
+                </ul>
+            </nav>
+            <div class="panel">
+                <ul>
+                    <li><a href="#" class="title">게임용 노트북</a></li>
+                    <li><a href="#">아이온 게임용 노트북</a></li>
+                    <li><a href="#">디아블로 게임용 노트북</a></li>
+                    <li><a href="#">블소 게임용 노트북</a></li>
+                    <li><a href="#" class="title">울트라북</a></li>
+                    <li><a href="#">헬로키티 울트라북</a></li>
+                    <li><a href="#">리락쿠마 울트라북 초특가</a></li>
+                    <li><a href="#">카피바라 울트라북</a></li>
+                    <li><a href="#">쵸파 울트라북</a></li>
+                    <li><a href="#">고양이 울트라북</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">둘리 노트북</a></li>
+                    <li><a href="#" class="title">노트북 가방</a></li>
+                    <li><a href="#">디아블로 게임용 노트북</a></li>
+                    <li><a href="#">블소 게임용 노트북</a></li>
+                    <li><a href="#">울트라북</a></li>
+                    <li><a href="#">헬로키티 울트라북 </a></li>
+                    <li><a href="#" class="title">받침대 / 쿨러</a></li>
+                    <li><a href="#">카피바라 울트라북</a></li>
+                    <li><a href="#">쵸파 울트라북</a></li>
+                    <li><a href="#">고양이 울트라북</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">게임용 노트북</a></li>
+                    <li><a href="#">아이온 게임용 노트북</a></li>
+                    <li><a href="#">디아블로 게임용 노트북</a></li>
+                    <li><a href="#">블소 게임용 노트북</a></li>
+                    <li><a href="#">울트라북</a></li>
+                    <li><a href="#" class="title">맥북</a></li>
+                    <li><a href="#">리락쿠마 울트라북 초특가</a></li>
+                    <li><a href="#">카피바라 울트라북</a></li>
+                    <li><a href="#" class="title">노트북 보호장비</a></li>
+                    <li><a href="#">고양이 울트라북</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">게임용 노트북</a></li>
+                    <li><a href="#">아이온 게임용 노트북</a></li>
+                    <li><a href="#">디아블로 게임용 노트북</a></li>
+                    <li><a href="#">블소 게임용 노트북</a></li>
+                    <li><a href="#">울트라북</a></li>
+                    <li><a href="#">노트북 보조 용품</a></li>
+                    <li><a href="#" class="title">외장하드 디스크</a></li>
+                    <li><a href="#">카피바라 울트라북</a></li>
+                    <li><a href="#">쵸파 울트라북</a></li>
+                    <li><a href="#">고양이 울트라북</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">게임용 노트북</a></li>
+                    <li><a href="#">아이온 게임용 노트북</a></li>
+                    <li><a href="#">디아블로 게임용 노트북</a></li>
+                    <li><a href="#" class="title">노트북 보조 용품</a></li>
+                    <li><a href="#">울트라북</a></li>
+                    <li><a href="#">헬로키티 울트라북</a></li>
+                    <li><a href="#">리락쿠마 울트라북 초특가</a></li>
+                    <li><a href="#">카피바라 울트라북</a></li>
+                    <li><a href="#">쵸파 울트라북</a></li>
+                    <li><a href="#">고양이 울트라북</a></li>
+                </ul>
+                
+            </div>
+        </header>
+        <section>
+            <div><img src="http://placehold.it/980x440" alt=""></div>
+            <div>
+                <img src="http://placehold.it/795x400" alt="">
+                <img src="http://placehold.it/795x400" alt="">
+                <img src="http://placehold.it/795x400" alt="">
+                <img src="http://placehold.it/795x400" alt="">
+            </div>
+            <div>
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+                <img src="http://placehold.it/170x200" alt="">
+            </div>
+             
+        </section>
+        <aside>
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+                <img src="http://placehold.it/90x160" alt="">
+        </aside>  
+    </div><!--class="container"-->
+     
+    <footer>
+        <addrass>
+           COMPANY : 주식회사 모먼트디자인OWNER : 김지혜 BUSINESS LICENSE : 602-87-01276 MALL-ORDER LICENSE : 제 2018-서울성동-1276호 <br>
+            ADDRESS : 04794 서울특별시 서대문구 신촌로 141(은하빌딩) 3층 312호 디자인TEL : 010-2316-4316<br>
+            CPO : 김지혜 (wisdomdothome@naver.com)CONTACT US : kimjihye1018@naver.com <br>
+            COPYRIGHT © 더나인몰 ALL RIGHTS RESERVED. HOSTING CAFE24 | DESIGNED By WISDOM 
+        </addrass>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

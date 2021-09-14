@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그라디언트</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /*선형*/
+        div{width: 200px; height: 200px; float: left; background-color: indianred; margin: 50px; text-align: center; line-height: 200px; font-size: 80px;}
+        div:nth-child(1){
+            background: linear-gradient(#0031ff , #ff0080);
+        }
+        div:nth-child(2){
+            background: linear-gradient(#ff0000 , #ffd800, #0031ff);
+        }
+        div:nth-child(3){
+            background: linear-gradient(90deg , #ff0000 , #ffd800 , #0031ff);
+        }
+        div:nth-child(4){
+            background: linear-gradient(45deg , #ff0000 , #ffd800 , #0031ff);
+        }
+        div:nth-child(5){
+            background: linear-gradient(-45deg , #ff0000 , #ffd800 , #0031ff);
+        }
+        div:nth-child(6){
+            background: linear-gradient(#ff0000 30%, #ffd800 70%);
+        }
+        div:nth-child(7){
+            background: linear-gradient(#0031ff 50% , #ff0080 50%);
+        }
+        div:nth-child(8){
+            background: linear-gradient(#0031ff 50% , #ff0080 0%);
+        }
+        div:nth-child(9){
+            background: linear-gradient(90deg , #0031ff 50% , #ff0080 50%);
+        }
+        div:nth-child(10){
+            background: linear-gradient(45deg , #0031ff 50% , #ff0080 50%);
+        }
+        div:nth-child(11){
+            background: linear-gradient(45deg , #0031ff 50% , #ff0080 50%);
+            background-position: 50px 50px;
+        }
+        div:nth-child(12){
+            background: linear-gradient(45deg , #0031ff 50% , #ff0080 50%);
+            background-position: 50px 50px;
+            background-repeat: no-repeat;
+        }
+        div:nth-child(13){
+            background: linear-gradient(45deg , transparent 50% , #ff0080 50%);
+            
+        }
+        div:nth-child(14){
+            background: linear-gradient(45deg , transparent 80% , #ff0080 50%);
+            
+        }
+        div:nth-child(15){
+            background: linear-gradient(45deg , transparent 20% , #ff0080 0%);
+            
+        }
+        div:nth-child(16){
+            background: linear-gradient(#ffd800 20% , #ff0080 0%, #ff0080 50%,
+            #ffd800 0%, #ffd800 70%, #0031ff 0%);
+       }
+        div:nth-child(17){
+            background: linear-gradient(#ffd800 20% , #ff0080 0%, #ff0080 50%,
+            #ffd800 0%, #ffd800 70%, #0031ff 0%);
+            background-size: 100% 25%;/*가로사이즈는 그대로 세로사이즈만 조절*/
+            
+       }
+        div:nth-child(18){
+            background: linear-gradient(45deg, #ffd800 20% , #ff0080 0%, #ff0080 50%,
+            #ffd800 0%, #ffd800 70%, #0031ff 0%);
+            
+       }
+        div:nth-child(19){
+            background: linear-gradient(45deg, #ffd800 20% , #ff0080 0%, #ff0080 50%,
+            #ffd800 0%, #ffd800 70%, #0031ff 0%);
+            background-size: 100% 25%;
+       }
+        div:nth-child(20){ position: relative; background-color: transparent;} 
+        div:nth-child(20)>span{ position: absolute; display: block; width: 100px; height: 100px; background: linear-gradient(45deg, transparent 20%, #ffd800 0%);}
+        div:nth-child(20)>span:nth-child(1){transform: rotate(90deg);}
+        div:nth-child(20)>span:nth-child(2){left: 100px; transform: rotate(180deg);}
+        div:nth-child(20)>span:nth-child(3){top: 100px; transform: rotate(-360deg);}
+        div:nth-child(20)>span:nth-child(4){left: 100px; top: 100px; transform: rotate(270deg);}
+        
+        div:nth-child(21){position: relative;}
+        div:nth-child(21)>span{float: left; display: block; width: 100px; height: 200px; 
+            background: linear-gradient(45deg, transparent 20%, #ffd800 0%);}
+        div:nth-child(21)>span:nth-child(2){
+            background: linear-gradient(-45deg, transparent 20%, #ffd800 0%);}
+        
+        div:nth-child(22){
+            background:linear-gradient(#ffeb82 50% , #ffd800 0%);
+            background-size: 100px 20px; 
+            
+       }div:nth-child(23){
+            background: linear-gradient(90deg, transparent 50% , rgba(0, 0, 0, 0.25) 50%);
+            background-size: 20px;
+                       
+            
+       }
+        div:nth-child(24){
+            background: linear-gradient(90deg, transparent 50% , rgba(0, 0, 0, 0.23) 50%),
+                        linear-gradient(#ffeb82 50% , #ffd800 0%);
+            background-size: 20px, 100px 20px;
+        } 
+        div:nth-child(25){
+            background: linear-gradient(transparent 20%, #ff0080 0%, #ff0080 40%, #ffd800 40%);
+            background-size: 100% 40px;
+        } 
+        div:nth-child(26){
+            background: linear-gradient(transparent 50%, #9d00ff 0%, #9d00ff 70%, #14ff00 70% );
+            background-size: 100% 20px;
+        } 
+        div:nth-child(27){
+            background: linear-gradient(transparent 50%, #9d00ff 0%, #9d00ff 70%, #14ff00 70%),
+                        linear-gradient(transparent 20%, #ff0080 0%, #ff0080 40%, #ffd800 40%);
+            background-size: 100% 20px,100% 40px;
+        } 
+        div:nth-child(28){
+            background: linear-gradient(-135deg, transparent 50%, #9d00ff 0%, #9d00ff 70%, #14ff00 70%);
+        } 
+        div:nth-child(29){
+            background: linear-gradient(-135deg, transparent 50%, #9d00ff 0%, #9d00ff 70%, #14ff00 70%);
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+        } 
+        div:nth-child(30){
+            background: linear-gradient(-135deg, transparent 50%, #9d00ff 0%, #9d00ff 70%, #14ff00 70%);
+            background-size: 50px 50px;
+        } 
+        div:nth-child(31){
+            background: linear-gradient(-135deg, transparent 70%, #9d00ff 0%, #9d00ff 80%, #14ff00 80%);
+            background-size: 50px 50px;
+        
+        } 
+        div:nth-child(32){
+            background: linear-gradient(-45deg, transparent 70%, #9d00ff 0%, #9d00ff 80%, #14ff00 80%),linear-gradient(#97a3ff, #97a3ff);
+            background-size: 50px 50px,100%;
+            background-repeat: no-repeat;
+        } 
+            
+    </style>
+</head>
+<body>
+    <div> 01 </div>
+    <div> 02 </div>
+    <div> 03 </div>
+    <div> 04 </div>
+    <div> 05 </div>
+    <div> 06 </div>
+    <div> 07 </div>
+    <div> 08 </div>
+    <div> 09 </div>
+    <div> 10 </div>
+    <div> 11 </div>
+    <div> 12 </div>
+    <div> 13 </div>
+    <div> 14 </div>
+    <div> 15 </div>
+    <div> 16 </div>
+    <div> 17 </div>
+    <div> 18 </div>
+    <div> 19 </div>
+    <div>
+        <span>20</span>
+        <span></span>
+        <span></span>
+        <span></span> 
+    </div>
+    <div>
+        <span>21</span>
+        <span></span>
+    </div>
+    <div>22</div>
+    <div>23</div>
+    <div>24</div>
+    <div>25</div>
+    <div>26</div>
+    <div>27</div>
+    <div>28</div>
+    <div>29</div>
+    <div>30</div>
+    <div>31</div>
+    <div>32</div>
+</body>
+</html>
+
+

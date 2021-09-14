@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{ margin: 0; padding: 0;}
+        a{ text-decoration: none; }
+        li{ list-style: none; }
+        
+        div{ width:75px; height: 100px; 
+            background-image: url(img/woman.png);
+        }
+        div:hover{ background-position: -75px 0; }
+        div:active{ background-position: -150px 0; }
+        
+        .banner{ position: relative; background: none;}
+        .banner>div{ position: absolute; opacity: 0; }
+        .banner>div:nth-child(1){ background-position: 0 0;
+            animation: ani 0.1s;
+        }
+        .banner>div:nth-child(2){ background-position: -75px 0; 
+            animation: ani 0.1s 0.1s;
+        }
+        .banner>div:nth-child(3){ background-position: -149px 0;
+            animation: ani 0.1s 0.2s;
+        }
+        .banner>div:nth-child(4){ background-position: -223px 0;
+            animation: ani 0.1s 0.3s;
+        }
+        .banner>div:nth-child(5){ background-position: -294px 0;
+             animation: ani 0.1s 0.4s;
+        }
+        .banner>div:nth-child(6){ background-position: -367px 0;
+             animation: ani 0.1s 0.5s;
+        }
+        .banner>div:nth-child(7){ background-position: -435px 0;
+             animation: ani 0.1s 0.6s;
+        }
+        .banner>div:nth-child(8){ background-position: 0 -100px;
+            animation: ani 0.1s  0.7s;
+        }
+        .banner>div:nth-child(9){ background-position: -75px -100px; 
+            animation: ani 0.1s 0.8s;
+        }
+        .banner>div:nth-child(10){ background-position: -149px -100px;
+            animation: ani 0.1s 0.9s;
+        }
+        .banner>div:nth-child(11){ background-position: -223px -100px;
+            animation: ani 0.1s 1s;
+        }
+        .banner>div:nth-child(12){ background-position: -294px -100px;
+             animation: ani 0.1s 1.1s;
+        }
+        .banner>div:nth-child(13){ background-position: -367px -100px;
+             animation: ani 0.1s 1.2s;
+        }
+        .banner>div:nth-child(14){ background-position: -435px -100px;
+             animation: ani 0.1s 1.3s;
+        }
+        .banner>div:nth-child(15){ background-position: 0 -200px;
+            animation: ani 0.1s  1.4s;
+        }
+        .banner>div:nth-child(16){ background-position: -75px -200px; 
+            animation: ani 0.1s 1.5s;
+        }
+        .banner>div:nth-child(17){ background-position: -149px -200px;
+            animation: ani 0.1s 1.6s;
+        }
+        .banner>div:nth-child(18){ background-position: -223px -200px;
+            animation: ani 0.1s 1.7s;
+        }
+        .banner>div:nth-child(19){ background-position: -294px -200px;
+             animation: ani 0.1s 1.8s;
+        }
+        .banner>div:nth-child(20){ background-position: -367px -200px;
+             animation: ani 0.1s 1.9s;
+        }
+        .banner>div:nth-child(21){ background-position: -435px -200px;
+             animation: ani 0.1s 2s;
+        }
+        
+        @keyframes ani{ 
+            100%{ opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+    <div class="banner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        
+    </div>
+    
+</body>
+</html>
+
+
+
+

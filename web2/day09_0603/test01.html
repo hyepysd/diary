@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>overflow</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{width: 300px; height: 200px; float: left; background-color: #339937; margin: 50px;}
+        div:nth-child(1){overflow: hidden; line-height: 18px; text-align: justify; text-indent: 1em; }
+        
+        /*::가상클래스*/
+        div:nth-child(1)::first-letter{font-size: 30px; color: red;}
+        div:nth-child(2)::first-line{color: gold; font-size: 40px;}
+        
+        div:nth-child(2){overflow: scroll;}
+        div:nth-child(3){overflow: scroll; 
+            /*컨텐츠 양이 작아도 비활성화 된 스크롤이 표현됨*/}
+        div:nth-child(4){overflow: auto; 
+            /*컨텐츠 양이 작으면 스크롤이 없고 컨텐츠 양이 많으면 스크롤이 표현됨*/}
+        div:nth-child(5){overflow: auto; }
+    </style>
+</head>
+<body>
+    <div>
+        Vivamus accumsan suscipit lectus, eget finibus nisl hendrerit a. Sed tristique metus eget tristique mattis. Sed laoreet magna sed nibh facilisis, nec dignissim ipsum iaculis. Morbi lobortis bibendum nisi, in elementum lectus eleifend vel. Morbi arcu odio, condimentum ut diam at, consectetur ullamcorper purus. Mauris ultrices eros at nulla aliquam egestas. Curabitur pharetra leo ac neque blandit, vitae varius orci tristique. Cras et lobortis ipsum.
+    </div>
+    <div>
+        Vivamus accumsan suscipit lectus, eget finibus nisl hendrerit a. Sed tristique metus eget tristique mattis. Sed laoreet magna sed nibh facilisis, nec dignissim ipsum iaculis. Morbi lobortis bibendum nisi, in elementum lectus eleifend vel. Morbi arcu odio, condimentum ut diam at, consectetur ullamcorper purus. Mauris ultrices eros at nulla aliquam egestas. Curabitur pharetra leo ac neque blandit, vitae varius orci tristique. Cras et lobortis ipsum.
+    </div>
+    <div>
+        Vivamus accumsan suscipit lectus, eget finibus nisl hendrerit a. Sed tristique metus eget tristique mattis. Sed laoreet magna sed nibh facilisis, nec dignissim ipsum iaculis. Morbi lobortis bibendum nisi, in elementum lectus eleifend vel. Morbi arcu odio
+    </div>
+    <div>
+        Vivamus accumsan suscipit lectus, eget finibus nisl hendrerit a. Sed tristique metus eget tristique mattis. Sed laoreet magna sed nibh facilisis, nec dignissim ipsum iaculis. Morbi lobortis bibendum nisi, in elementum lectus eleifend vel. Morbi arcu odio
+    </div>
+    <div>
+        Vivamus accumsan suscipit lectus, eget finibus nisl hendrerit a. Sed tristique metus eget tristique mattis. Sed laoreet magna sed nibh facilisis, nec dignissim ipsum iaculis. Morbi lobortis bibendum nisi, in elementum lectus eleifend vel. Morbi arcu odio, condimentum ut diam at, consectetur ullamcorper purus. Mauris ultrices eros at nulla aliquam egestas. Curabitur pharetra leo ac neque blandit, vitae varius orci tristique. Cras et lobortis ipsum.
+    </div>
+    
+</body>
+</html>

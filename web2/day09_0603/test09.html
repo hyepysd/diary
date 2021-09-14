@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0, minimum-scale=1.0,user-scalable=yes" />
+    
+    <title>responsive layout</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /*기본디자인*/
+        body{}
+        .grid-12,.grid-8,.grid-4{position: fixed; left: 0; top: 0; }
+        
+        .grid-12{width: 1200px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5);}
+        .columb-12{width: 80px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        .grid-8{width: 600px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5); display: none;}
+        .columb-8{width: 55px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        .grid-4{width: 360px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5); display: none;}
+        .columb-4{width: 70px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        
+        @media screen and (max-width:1200px){
+            /*1280px이하*/
+            body{background-color: orange;}
+        }
+        @media screen and (max-width:600px){
+           
+            body{background-color: gold;}
+            .grid-12{display: none;}
+            .grid-8{display: block;}
+        }
+        @media screen and (max-width:360px){
+            
+            body{background-color: purple;}
+            .grid-8{display: none;}
+            .grid-4{display: block;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-12">
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+    </div>
+    <div class="grid-8">
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+    </div>
+    <div class="grid-4">
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+    </div>
+    <style>
+        section{position: fixed; left: 360px; top: 0; width: 1200px; height: 1000px; background-color: rgba(255, 215, 0, 0.56); }
+        section>div{float: left; height: 150px; background-color: indianred; margin-bottom: 10px;}
+        .section-12{width: 100%; }
+        .columb-6{width: 49.5%; margin-right: 1%;}
+        .section-4{width: 31.333%; margin-right: 1%;}
+        .columb-3{width: 24%; margin-right: 1%;}
+        .columb-2{width: 15.6%; margin-right: 1%;}
+        
+    </style>
+    <section>
+       <!--각각의 구조물이 그리드에 맞게 배치한 것-->
+        <div class="section-12">12</div>
+        <div class="columb-6">6</div>
+        <div class="columb-6" style="margin-right: 0;">6</div>
+        <div class="section-4">4</div>
+        <div class="section-4">4</div>
+        <div class="section-4" style="margin-right: 0;">4</div>
+        <div class="columb-3">3</div>
+        <div class="columb-3">3</div>
+        <div class="columb-3">3</div>
+        <div class="columb-3" style="margin-right: 0;">3</div>
+        <div class="columb-2">2</div>
+        <div class="columb-2">2</div>
+        <div class="columb-2">2</div>
+        <div class="columb-2">2</div>
+        <div class="columb-2">2</div>
+        <div class="columb-2">2</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=3.0, minimum-scale=1.0,user-scalable=yes" />
+    
+    <title>responsive layout</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /*기본디자인*/
+        body{}
+        .grid-12,.grid-8,.grid-4{position: fixed; left: 0; top: 0; }
+        
+        .grid-12{width: 1200px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5);}
+        .columb-12{width: 80px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        .grid-8{width: 600px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5); display: none;}
+        .columb-8{width: 55px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        .grid-4{width: 360px; height: 1000px; margin: auto; background-color: rgba(0, 235, 255, 0.5); display: none;}
+        .columb-4{width: 70px; height: 1000px; margin: 0px 10px; background-color: rgba(205, 92, 92, 0.5); float: left;}
+        
+        
+        @media screen and (max-width:1200px){
+            /*1280px이하*/
+            body{background-color: orange;}
+        }
+        @media screen and (max-width:600px){
+           
+            body{background-color: gold;}
+            .grid-12{display: none;}
+            .grid-8{display: block;}
+        }
+        @media screen and (max-width:360px){
+            
+            body{background-color: purple;}
+            .grid-8{display: none;}
+            .grid-4{display: block;}
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-12">
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+        <div class="columb-12"></div>
+    </div>
+    <div class="grid-8">
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+        <div class="columb-8"></div>
+    </div>
+    <div class="grid-4">
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+        <div class="columb-4"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>왜곡 레이아웃</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style>
+        .bgImg{position: fixed; background-image: url(img/img02.jpg); width: 100%; height: 100%; /*background-size: cover; */ 
+        background-position: -200px 0px;
+        animation: bgAni 20s infinite;}
+        
+        header{position: fixed; width: 30%; height: 100%; background-color: #f48989;
+        transform: skewX(-30deg);
+        transform-origin: left top;}
+        
+        @keyframes bgAni{
+            20%{background-position: -150px -200px;}
+            40%{background-position: -200px -100px;}
+            60%{background-position: -250px -100px;}
+            80%{background-position: -250px -250px;}
+        }
+        
+        header h1{position: absolute; left: 80px; top: 60px; font-size: 90px; transform: skewX(30deg); font-family: 'Fredoka One', cursive; color: #b11c1c;}
+        
+        header nav{float: right; margin-right: 1em; margin-top: 200px;}
+        .navi a{display: block; width: 150px; height: 40px; text-align: right; line-height: 40px; padding-right: 1em; background-color: #fff2f2; margin-bottom: 3px; font-size: 16px; color: #222; font-weight: bold;}
+        
+        .navi a:hover{background-color: #b11c1c; color: white;}
+        .navi>li{position: relative;}
+        .navi>li:hover ul{left: 175px; opacity: 1; }
+        .navi ul{position: absolute; transition: all 1s; left: 0; top: 0; opacity: 0;}
+        .navi span{display: block; transform: skewX(30deg);}
+        
+        aside{position: fixed; width: 450px; height: 100%; right: -300px; bottom: 0; padding: 20px; background-color: rgba(0, 0, 0, 0.5); transform: skewX(-30deg); transform-origin: right bottom;}
+        aside:hover{right: 150px; transition:  all 1s;}
+        .inner{position: absolute; bottom: 0;}
+        .inner>div{margin-bottom: 10px;}
+        .inner p{transform: skewX(30deg); color: white; font-size: 16px;font-weight: bold;}
+        
+        .sns{position: absolute; right: 0px; top: 0px; background-color: rgba(0, 0, 0, 0.68); width: 100%; height: 30px; line-height: 30px;}
+        .sns ul{float: right;}
+        .sns li{float: left; margin-right: 20px;}
+        .sns a{color: #fff2f2; font-size: 20px; }
+        
+    </style>
+</head>
+<body>
+    <div class="bgImg"></div>
+    <header>
+        <h1>WISDOM</h1>
+        <nav>
+            <ul class="navi">
+                <li><a href="#"><span>Browse</span></a>
+                    <ul>
+                        <li><a href="#"><span>Palettes</span></a></li>
+                        <li><a href="#"><span>Patterns</span></a></li>
+                        <li><a href="#"><span>Shapes</span></a></li>
+                        <li><a href="#"><span>Colors</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Community</a>
+                    <ul>
+                        <li><a href="#"><span>Blog</span></a></li>
+                        <li><a href="#"><span>Forums</span></a></li>
+                        <li><a href="#"><span>Groups</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Channels</a>
+                    <ul>
+                        <li><a href="#"><span>Craft</span></a></li>
+                        <li><a href="#"><span>Dightal</span></a></li>
+                        <li><a href="#"><span>Fashion</span></a></li>
+                        <li><a href="#"><span>Home</span></a></li>
+                        <li><a href="#"><span>Print</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tnasds</a>
+                    <ul>
+                        <li><a href="#"><span>Branding</span></a></li>
+                        <li><a href="#"><span>Handmade</span></a></li>
+                        <li><a href="#"><span>Interior Looks</span></a></li>
+                        <li><a href="#"><span>Magasines</span></a></li>
+                        <li><a href="#"><span>Websites</span> </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Tools</a>
+                    <ul>
+                        <li><a href="#"><span>PHOTOCOPY</span></a></li>
+                        <li><a href="#"><span>COPASO</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <div class="inner">
+            <div>
+                <img src="http://placehold.it/300x150" alt="">
+                <p> caption</p>
+            </div>
+            <div>
+                <img src="http://placehold.it/300x150" alt="">
+                <p> caption</p>
+            </div>
+            <div>
+                <img src="http://placehold.it/300x150" alt="">
+                <p> caption</p>
+            </div>
+        </div>
+    </aside>
+    <div class="sns">
+        <ul>
+            <li><a href="#">Tweeter</a></li>
+            <li><a href="#">Insratgram</a></li>
+            <li><a href="#">facebook</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

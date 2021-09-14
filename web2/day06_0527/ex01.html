@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>메뉴연습</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<style>
+		.lnb>li{float: left; margin-left: 5px;}
+		.lnb li a{display: block; width: 100px; height: 40px; background-color: indianred; text-align: center; line-height: 40px;}
+		.lnb li a:hover{background-color: gold;}
+		.lnb li:hover>a+ul li a{display: block;} 
+		
+		.lnb ul a{ display: none; width: 100px; height: 40px;}
+		.lnb ul a:hover{background-color: rebeccapurple;}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul class="lnb">
+			<li><a href="#">MENU01</a>
+				<ul>
+					<li><a href="#">SUBMENU01</a></li>
+					<li><a href="#">SUBMENU02</a></li>
+					<li><a href="#">SUBMENU03</a></li>
+					<li><a href="#">SUBMENU04</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU02</a>
+				<ul>
+					<li><a href="#">SUBMENU01</a></li>
+					<li><a href="#">SUBMENU02</a></li>
+					<li><a href="#">SUBMENU03</a></li>
+					<li><a href="#">SUBMENU04</a></li>
+				</ul>
+			</li>
+			<li><a href="#">MENU03</a></li>
+			<li><a href="#">MENU04</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
