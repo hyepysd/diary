@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>출력</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ultra&display=swap');
+        /*font-family: 'Abril Fatface', cursive;
+        font-family: 'Ultra', serif;*/
+        body{font-family: 'Ultra', serif;}
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box" id="box"></div>
+    <script>
+        /*
+        java script : 원본
+        jQuery > js라이브러리 (만들어진 도구 40개)
+        디버깅(오류찾기)의 목적으로 사용되는 출력
+        */
+        window.document.write('document write')
+        window.document.title = 'wisdom';
+        window.document.getElementsByTagName('div')[0].innerHTML = 'This is box';
+        window.document.getElementsByClassName('box')[1].innerHTML = 'Class name';
+        window.document.getElementsByClassName('box')[1].style.color = 'purple';
+        window.document.getElementById('box').innerHTML = 'This is Id box';
+        window.document.getElementById('box').style.backgroundColor = '#ffd800';
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

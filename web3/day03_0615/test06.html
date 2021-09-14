@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>collepse</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        button{width: 100%; padding: 15px 0px; font-size: 24px; }
+        .box{ width: 100%; height: 300px; background-color: indianred; /*transition: all 0.4s;*/}
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        $('.box').slideUp();
+        
+        $('button').click(function(){
+            $('.box').slideToggle();
+        })
+        
+    })
+
+    </script>
+</head>
+<body>
+    <button> 자세한 내용을 보려면 버튼을 누르삼 </button>
+    <div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>입력</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ultra&display=swap');
+        /*font-family: 'Abril Fatface', cursive;
+        font-family: 'Ultra', serif;*/
+        body{font-family: 'Ultra', serif;}
+        
+        .box{font-size: 20px; background-color: gold; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+            /*$('.box').css('width','200px');  
+            $('.box').css('height','200px');  
+            $('.box').css('margin','50px');  
+            $('.box').css('text-align','center'); 
+            $('.box').css('line-height','200px');
+            $('.box').css('font-size','50px');*/
+          
+          /*    chainning 기법
+          $('.box').css('width','200px')
+                    .css('height','200px')
+                    .css('margin','50px')
+                    .css('text-align','center')
+                    .css('line-height','200px')
+                    .css('font-size','50px');*/
+          /*배열식 표현법 : 여러개를 나열한다*/
+          $('.box').css({'width':'200px','height':'200px','margin':'50px','text-align':'center','line-height':'200px','font-size':'50px'});
+          
+          
+        })
+    </script>
+</head>
+<body>
+   <div class="box">BOX</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

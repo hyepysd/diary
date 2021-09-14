@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>silde up / down </title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        button{ padding: 15px; font-size: 24px; }
+        .box{ width: 100%; height: 300px; background-color: indianred;
+            display: none; }
+        
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        $('button').eq(0).click(function(){
+            // style에서 지정된 height만큼 slidedown함
+        $('.box').slideDown();    
+        })
+        
+        $('button').eq(1).click(function(){
+            // 무조건 height가 0인 상태
+        $('.box').slideUp();    
+        })
+        
+        $('button').eq(2).click(function(){
+            // 무조건 height가 0인 상태
+        $('.box').slideDown(3000);    
+        })
+        
+        $('button').eq(3).click(function(){
+            $('.box').slideToggle(/*2000*/);
+        })
+        
+        
+    })
+
+    </script>
+</head>
+<body>
+    <button> SLIDE DOWN </button>
+    <button> SLIDE UP </button>
+    <button> SLIDE DOWN(3000) </button>
+    <button> SLIDE TOGGLE </button>
+    <button> HEIGHT(0) </button>
+    <button> HEIGHT(300) </button>
+    <div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+

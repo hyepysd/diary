@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        
+        .accordion{width: 700px; margin: auto;}
+        dt{height: 50px; line-height: 50px; background: linear-gradient(#fafafa 20%,#b9b9b9 75%); text-indent: 1em; }
+        dd{height: 0px; line-height: 30px; word-spacing: 12px; overflow: auto; transition: all 0.4s ease-in-out; margin-bottom: 2px;}
+        
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        $('dt').eq(0).click(function(){
+            $('dd').height(0);
+            $('dd').eq(0).height(100);
+        })
+        $('dt').eq(1).click(function(){
+            $('dd').height(0);
+            $('dd').eq(1).height(150);
+        })
+        $('dt').eq(2).click(function(){
+            $('dd').height(0);
+            $('dd').eq(2).height(150);
+        })
+        $('dt').eq(3).click(function(){
+            $('dd').height(0);
+            $('dd').eq(3).height(150);
+        })
+        
+    })
+        
+
+    </script>
+</head>
+<body>
+    <section>
+        <div class="accordion">
+           <dl>
+               <dt>가맹점 하고싶음</dt>
+               <dd>명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다. 모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</dd>
+           </dl>
+           <dl>
+               <dt>점포도 구해주삼</dt>
+               <dd>대통령은 국무총리·국무위원·행정각부의 장 기타 법률이 정하는 공사의 직을 겸할 수 없다. 대통령·국무총리·국무위원·행정각부의 장·헌법재판소 재판관·법관·중앙선거관리위원회 위원·감사원장·감사위원 기타 법률이 정한 공무원이 그 직무집행에 있어서 헌법이나 법률을 위배한 때에는 국회는 탄핵의 소추를 의결할 수 있다.</dd>
+           </dl>
+           <dl>
+               <dt>점포 조건이 모임</dt>
+               <dd>국가는 농업 및 어업을 보호·육성하기 위하여 농·어촌종합개발과 그 지원등 필요한 계획을 수립·시행하여야 한다. 국무위원은 국무총리의 제청으로 대통령이 임명한다. 공개하지 아니한 회의내용의 공표에 관하여는 법률이 정하는 바에 의한다. 의무교육은 무상으로 한다. 누구든지 체포 또는 구속을 당한 때에는 적부의 심사를 법원에 청구할 권리를 가진다.</dd>
+           </dl>
+           <dl>
+               <dt>점포 평가기준은 모임</dt>
+               <dd>교육의 자주성·전문성·정치적 중립성 및 대학의 자율성은 법률이 정하는 바에 의하여 보장된다. 대통령은 법률에서 구체적으로 범위를 정하여 위임받은 사항과 법률을 집행하기 위하여 필요한 사항에 관하여 대통령령을 발할 수 있다. 대통령은 법률이 정하는 바에 의하여 사면·감형 또는 복권을 명할 수 있다.</dd>
+           </dl>
+           
+            
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+

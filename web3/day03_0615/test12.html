@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>accordion_세로</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .accordion{width: 700px; margin: auto;}
+        .accordion>div{height: 700px; width: 50px; float: left; transition: all 0.5s ease-in-out; position: relative; overflow: hidden;}
+        .accordion div:nth-child(1){background-color: indianred;}
+        .accordion div:nth-child(2){background-color: #6d5ccd;}
+        .accordion div:nth-child(3){background-color: #5ccd60;}
+        .accordion div:nth-child(4){background-color: #cdc05c; width: 550px;}
+        .accordion span{display: block; width: 550px; height: 700px; background-color: #a04343; position: absolute; left: 50px;}
+        
+        .accordion div:nth-child(2) span{background-color: rebeccapurple;}
+        .accordion div:nth-child(3) span{background-color: lawngreen;}
+        .accordion div:nth-child(4) span{background-color: goldenrod;}
+        
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        //각 div을 클릭할 때 클릭된 div의 너비를 넓혀준다.
+        // slide는 좌/우를 제어할 수 없다.
+         $('.accordion div').eq(0).click(function(){
+             $('.accordion div').width(50);
+             $('.accordion div').eq(0).css({'width':'550'});
+         })
+        $('.accordion div').eq(1).click(function(){
+             $('.accordion div').width(50);
+             $('.accordion div').eq(1).css({'width':'550'});
+         })
+        $('.accordion div').eq(2).click(function(){
+             $('.accordion div').width(50);
+             $('.accordion div').eq(2).css({'width':'550'});
+         })
+        $('.accordion div').eq(3).click(function(){
+             $('.accordion div').width(50);
+             $('.accordion div').eq(3).css({'width':'550'});
+         })
+        
+    })
+        
+
+    </script>
+</head>
+<body>
+    <section>
+        <div class="accordion">
+           <div><span></span></div>
+           <div><span></span></div>
+           <div><span></span></div>
+           <div><span></span></div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+

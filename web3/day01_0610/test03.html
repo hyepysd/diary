@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>출력</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ultra&display=swap');
+        /*font-family: 'Abril Fatface', cursive;
+        font-family: 'Ultra', serif;*/
+        body{font-family: 'Ultra', serif;}
+        
+        .box:nth-child(2){background-color: gold;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       /*$(function(){
+           html구조를 모두 읽은 후 나(jQuery)를 실행하세요
+       })*/
+        $(function(){
+            // $('body').text('jQuery string insert');
+            $('.box:nth-child(1)').text('This is box')
+            $('.box').eq(1).text('This is box2')
+            $('#box').text('This is Id box')
+            
+            /*이벤트 : 키보드, 마우스, 시간 제어*/
+            $('.box').eq(1).click(function(){
+                $(this).css({'background-color':"#a243cc"});
+            })
+        
+        })
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box" id="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

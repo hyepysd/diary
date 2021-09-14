@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>보임 / 숨김 _ height</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <style>
+        /* css 의 보임과 숨김 
+            1. display:block, lnline, inline-block / none
+            2. opacity : 0 / 1
+            3. width : 0 + overflow:hidden
+            4. height : 0 + overflow:hidden
+        */
+        button{padding: 20px; font-size: 20px; }
+        .box{width: 300px; height: 300px; background-color: indianred; text-align: center; line-height: 300px; font-size: 80px; 
+            overflow: hidden; /*width를 사용할 때는 overflow 속성을 사용하여야 한다*/ transition: all 1s;}
+    </style>
+    <script>
+        $(function(){
+            $('button').eq(0).click(function(){
+                $('.box').css({'height':'300px','overflow':'hidden','transition':'all 1s'});
+            })
+            $('button').eq(1).click(function(){
+                $('.box').css({'height':'0px','overflow':'hidden','transition':'all 1s'});
+            })
+        })
+    </script>
+</head>
+<body>
+    <section>
+        <div class="btn"><button>SHOW</button><button>HIDE</button></div>
+        <div class="box">BOX</div>
+    </section>
+</body>
+</html>

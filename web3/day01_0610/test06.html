@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>입력</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ultra&display=swap');
+        /*font-family: 'Abril Fatface', cursive;
+        font-family: 'Ultra', serif;*/
+        body{font-family: 'Ultra', serif;}
+        
+        button{font-size: 20px;}
+        .box{font-size: 20px; background-color: gold; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+          var str = window.confirm('장바구니로 가시겠습니까?')
+          /* 확인,취소버튼을 선택할 수 있고
+             확인은 true 취소는 false 데이터를 가져온다
+             논리값 = boolean = true. flase
+          */
+          if(str){
+              $('.box').text('장바구니에 담았습니다')
+          }else{
+              $('.box').text('즐거운 쇼핑 되세요')
+          }
+        })
+    </script>
+</head>
+<body>
+   
+   <button> hello </button>
+    <div class="box"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Show / hide 베너</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <style>
+        .banner{width: 300px; position: absolute; left: 100px; top: 100px; }
+        
+        .bigImg{width: 100%; height: 350px; border: 1px solid #b4b4b4; box-sizing: border-box; position: relative;}
+        .bigImg>div{width: 100%; height: 350px; position: absolute; left: 0; top: 0; /* transition: all 1s;*/}
+        .bigImg>div:nth-child(1){background-color: rebeccapurple; /* display: block;*/}
+        .bigImg>div:nth-child(2){background-color: #5c72cd;}
+        .bigImg>div:nth-child(3){background-color: #76cd5c;}
+        
+        .btn li{float: left; width: 33.3333%; height: 100px; text-align: center; line-height: 100px; font-weight: bold; }
+        .btn li:nth-child(1){background-color: rebeccapurple;}
+        .btn li:nth-child(2){background-color: #5c72cd;}
+        .btn li:nth-child(3){background-color: #76cd5c;}
+        
+    </style>
+    <script>
+        $(function(){
+            /* position은 초기화 작업이 필요없음*/
+            $('.btn li').eq(0).mouseover(function(){
+                $('.bigImg>div').hide();
+                $('.bigImg>div').eq(0).show();
+             })
+             $('.btn li').eq(1).mouseover(function(){
+                $('.bigImg>div').hide();
+                $('.bigImg>div').eq(1).show();
+             })
+             $('.btn li').eq(2).mouseover(function(){
+                $('.bigImg>div').hide();
+                $('.bigImg>div').eq(2).show();
+             })
+              
+        })
+    </script>
+</head>
+<body>
+    <section>
+        <div class="banner">
+            <div class="bigImg">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="btn">
+                <ul>
+                    <li>purple</li>
+                    <li>blue</li>
+                    <li>green</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

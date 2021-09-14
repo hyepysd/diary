@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>처리</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Ultra&display=swap');
+        /*font-family: 'Abril Fatface', cursive;
+        font-family: 'Ultra', serif;*/
+        body{font-family: 'Ultra', serif;}
+        
+        .callepse{width: 500px; margin-left: 100px;}
+        .title{background-color: gold; color: white; height: 500px; float: left;}
+        .title>span{display: block; transform: rotate(-90deg); margin-top: 50px; }
+        .content{background-color: deeppink; height: 500px; width: 0px; overflow: hidden; float: left;}.
+        .content>span{display: block; transform: rotate(-90deg); margin-top: 50px; }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(function(){
+          $('.title').click(function(){
+              $('.title').css({'width':'70px','transition':'all 0.5s'})
+              $('.content').css({'width':'300px','transition':'all 0.5s'})
+          })
+        })
+    </script>
+</head>
+<body>
+   <section>
+       <div class="callepse">
+           <div class="title"><span>ABOUT</span></div>
+           <div class="content"><span>GreatJones</span></div>
+       </div>
+   </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
