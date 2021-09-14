@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>문자태그</title>
+    </head>
+    <body>
+        <h1>태그 = 요소 = element = node</h1>
+        <p>
+            <b>굵게</b> <i>기울림</i> <u>밑줄</u>
+            <b><i><u>한번에</u></i></b> <br><br><br>
+        </p>
+        <p>
+            <mark>형광펜 효과</mark>
+        </p>
+        <p>
+            <font size="3" color="red">문자</font>
+            <font size="3" color="#ffce00">문자</font>
+            <font size="3" color="#0000ff">문자</font>
+            <font size="3" color="#45ff00">문자</font>
+            <font size="3" color="#ffffff"><mark>문자</mark></font>
+            <font size="3" color="#000000">문자</font>
+            <mark>
+                <font size="3" color="#ffffff">문자</font>
+            </mark> <br><br>
+            <font size="4" color="#2ca2c6">한글은 아름다운 글입니다.<font size="4" color="#000000">문자</font>한글은 아름다운 글입니다.</font>
+        </p>
+    </body>
+</html>
