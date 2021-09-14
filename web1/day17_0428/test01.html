@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>clearfix</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{width: 300px; height: 300px;}
+        div:nth-child(1){ background-color: #ad3030; float: right; }
+        div:nth-child(2){ background-color: #30ad3e; float: left; }
+        div:nth-child(3){ background-color: #3048ad; clear: right; }
+    </style>
+</head>
+<body>
+        <div>red</div>
+        <div>green</div>
+        <div>blue</div>
+        <!-- 형(상위구조) float:left 하면 동생(하위구조)이 문제발생 
+            문제1. float:left 된 구조 아래로 다음 하위구조가 숨겨진다. 
+                  텍스트는 숨겨지지 않고 다른 위치에 흘러진다.
+            문제2. 배경이 없어진다. 
+            문제3. 테두리가(border) 없어진다. 
+            문제4. 레이아웃 어딘가가 숨겨져서 안보인다 
+        
+            해결방법1. clear: left / right / both 를 float된 
+                      형제레벨일때만 사용가능
+            해결방법2. 구조:after{content : ''; , display:block; ,                     clear:both; } 2촌이상의 사촌레벨일때 가능
+            해결방법3. overflow속성 사용
+            해결방법4. 자식이 float된 경우 부모도 float 한다.
+                     문제는 2촌이상의 사촌레벨일때는 여전히 문제 발생한다. 
+                     사촌은 해결방법2를 사용한다.
+            해결방법5. float된 구조물에 height값을 준다.
+        -->
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블루힐 농장</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        #wrap{width: 960px; margin: auto;}
+        #header{width: 100%; height: 218px; background-color: indianred; background-image: url(img/top2.png); }
+        #header h1{float: left; text-indent: 7.2em; /*text-align: center;*/ line-height: 218px; font-size: 50px; color: #CBD4F9; 
+        text-shadow: 0 0 1px #303a5d,
+                     1px 1px 1px #303a5d,
+                     2px 2px 1px #303a5d,
+                     3px 3px 1px #303a5d,
+                     4px 4px 1px #303a5d;}
+        
+        #header>ul{float: right; padding-top: 5px;}
+        #header li{float: left;}
+        #header a{display: block; padding: 5px 10px; color: white; }
+        #header a:hover{color: #425580; background-color: #CBD4F9;}
+        
+        
+        #nav{width: 100%; height: 70px; background-color: #303a5d;}
+        #nav ul li {float: left; width: 25%; text-align: center; line-height: 70px;}
+        #nav ul li a{color: white; }
+        #nav a{display: block; color: white; font-size: 17px;font-weight: bold; }
+        #nav a:hover{color: #CBD4F9; }
+        
+        #contents{width: 960px; height: 610px; border-right: 1px solid #7e657e;}
+        .cont1{width: 20%; height: 100%; float: left; padding-top: 20px; border-left: 1px solid #7e657e; height:610px; border-right: 1px solid #7e657e; box-sizing: border-box; }
+        .cont1 h2{width: 80%; margin: auto; height: 160px; 
+            padding: 10px;
+            border: 1px solid #cbd4f9; border-radius: 10px;
+            box-shadow: 2px 2px 3px #425580;
+            background-image: url(img/bg.png);  
+            background-repeat: no-repeat; /*이미지 반복 x */
+            background-position: right bottom;
+            margin-bottom: 20px;}
+        .cont1 ul li{width: 95%; text-align: right; line-height: 20px; }
+        .cont1 ul li:nth-child(3n+1){font-size: 17px; font-weight: bold;}
+        .cont1 ul li:nth-child(3n){margin-bottom: 10px;}
+        
+        .cont2{width: 80%; height: 100%; float: right;
+               box-sizing: border-box; padding: 20px 10px;}
+        .cont2 p:nth-child(1){font-size: 16px;font-weight: bold; margin-bottom: 10px;}
+        .cont2 p:nth-child(2){line-height: 20px; margin-bottom: 20px;}
+        .cont2 h3{font-size: 22px; margin-bottom: 15px; }
+        .cont2 div{margin-left: 20px;}
+        .cont2 img{margin: 5px;}
+        
+        #footer{width: 100%; height: 200px; background-color: #303a5d; clear: both; color: white; padding: 10px; box-sizing: border-box;}
+        #footer:after{content: ''; display: block; clear: both;}
+        #footer a{color: white; }
+        #footer ul{float: left; margin-right: 20px; width: 200px;}
+        #footer li{line-height: 20px;}
+        .title{background-color: #CBD4F9; color: #303a5d; text-indent: 10px; height: 30px; padding-top: 10px; margin-bottom: 10px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>블루힐 농장</h1>
+            <ul>
+                <li><a href="#">login</a></li>
+                <li><a href="#">join</a></li>
+                <li><a href="#">cart</a></li>
+                <li><a href="#">mypage</a></li>
+            </ul>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">처음으로</a></li>
+                <li><a href="sub2.html">농장소개</a></li>
+                <li><a href="sub3.html">블루베리</a></li>
+                <li><a href="sub4.html">상품구매</a></li>
+            </ul>
+        </div>
+        <div id="contents">
+            <div class="cont1">
+               <h2>블루힐농장</h2>
+                <ul>
+                    <li>문의전화</li>
+                    <li>070-199-1018 / 010-2316-4316</li>
+                    <li>오전 9시 ~ 오후 7시</li>
+                    <li>입금계좌</li>
+                    <li>농협 302-1138-8982-71</li>
+                    <li>예금주 김지혜</li>
+                </ul>
+            </div>
+            <div class="cont2">
+                <p>블루힐 농장을 찾아주셔서 감사합니다.</p>
+                <p>블루힐의 블루베리는 제주의 맑고 깨끗한 자연으로 키워낸 친환경 농산물입니다. <br> 하우스시설 재배를 통해 두고 있으며 생과로서 최고의 맛이라 할 수 있는 품종을 지배합니다. <br> 또한 제품 포장에서 배송까지 모든 과정을 신속하고 정확하게 책임지며 직거래를 통해 최상의 블루베리를 전해드리고 있습니다.</p>
+                <h3>농원 정경</h3>
+                <div>
+                    <img src="./img/ph1-s.png" alt="">
+                    <img src="./img/ph2-s.png" alt="">
+                    <img src="./img/ph3-s.png" alt="">
+                    <img src="./img/ph4-s.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <ul>
+                <li class="title">빠른연결</li>
+                <li><a href="#">농장소개</a></li>
+                <li><a href="#">블루베리</a></li>
+                <li><a href="#">상품구매</a></li>
+                <li><a href="https://steptohealth.co.kr/8-goods-of-bluberries/" target="_blank";>블루베리효능</a></li>
+                <li><a href="https://twitter.com/explore" target="_blank";>트위터</a></li>
+            </ul>
+            <ul>
+                <li class="title">빠른연결</li>
+                <li><a href="#">농장소개</a></li>
+                <li><a href="#">블루베리</a></li>
+                <li><a href="#">상품구매</a></li>
+                <li><a href="https://steptohealth.co.kr/8-goods-of-bluberries/" target="_blank";>블루베리효능</a></li>
+                <li><a href="https://twitter.com/explore" target="_blank";>트위터</a></li>
+            </ul>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

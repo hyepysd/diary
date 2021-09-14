@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블루힐 농장</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        /*아이디는 우선순위 100*/
+        /*클래스는 우선순위 10*/
+        /*태그는 우선순위 1*/
+        #wrap{width: 1200px; margin: auto;}
+        #header{width: 100%; height: 200px; background-color: indianred;}
+        /*#header img{width: 1200px; height: 200px;}*/
+        
+        #nav{width: 100%; height: 70px; background-color: #272a7b;}
+        #nav ul li {float: left; width: 300px; text-align: center; line-height: 70px;}
+        #nav ul li a{color: white; }
+        
+        #contents{width: 100%; height: 800px; }
+        .cont1{width: 20%; height: 100%; background-color: goldenrod;float: left;}
+        .cont2{width: 80%; height: 100%; background-color: #9a20da; float: right;}
+        
+        #footer{width: 100%; height: 300px; background-color: #272a7b; clear: both; }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <img src="./img/top2.png" alt="">
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#">처음으로</a></li>
+                <li><a href="#">농장소개</a></li>
+                <li><a href="#">블루베리</a></li>
+                <li><a href="#">상품구매</a></li>
+            </ul>
+        </div>
+        <div id="contents">
+            <div class="cont1">
+               <p>농장소개</p>
+                <img src="./img/bg.png" alt="블루베리">
+            </div>
+            <div class="cont2"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
