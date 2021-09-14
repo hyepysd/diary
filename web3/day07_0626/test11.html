@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>시간제어</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        body{font-size: 100px; }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+       // 배열 
+       var img = ['url(./images/img01.png)', 
+                  'url(./images/img02.png)', 
+                  'url(./images/img03.png)', 
+                  'url(./images/img04.png)'];    
+        
+       var n = 0; 
+       var timer = setInterval( colorFun, 3000);
+        
+       function  colorFun(){
+           $('body').css('background-image' , img[n]);
+           n++;
+           if(n>4) n = 0; 
+       }   
+    })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+

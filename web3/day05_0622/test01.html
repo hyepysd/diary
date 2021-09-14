@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{ width: 200px; height: 200px;
+            background-color: orange; 
+            position:absolute; left:50%;  margin-left:-100px; 
+            top:50%; margin-top:-100px; 
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        /*.animate({속성:값, 속성:값}, duration, 가속, callback )
+            값이 숫자인 경우만 애니메이션 사용할 수 있음 
+            css 속성 중 숫자를 value 로 사용하는 것 
+            opacity, width, height, font-size, 
+            margin, padding, letter-spacing, word-spacing, 
+            border-width, left, top, right, bottom, z-index,
+            text-indent, 
+        */
+
+        $('div').mouseover(function(){
+            $('div').animate({ 'left': '80%'}, 1000, 'linear', 
+                function(){
+                // callback
+                $('div').delay(2000).animate({ 'left':'50%'}, 200, 'linear');
+                }                
+            ); // animate end 
+        }) // mouseover end 
+    })
+    </script>
+</head>
+<body>
+    <div> BOX </div>
+</body>
+</html>
+
+
+
+
+
+

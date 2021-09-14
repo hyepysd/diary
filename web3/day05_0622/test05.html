@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .gnb li{float: left; padding: 0 10px; }     
+        .gnb a{ display: block; padding:10px; font-size: 20px; }
+        .gnb span{ display: block;  width: 0%; height: 5px;
+            background-color: purple; margin-left:50%; 
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        var duration = 200; 
+        $('.gnb li').mouseover(function(){
+            console.log($(this).text())
+            
+            $(this).find('span').stop()
+                .animate({'width':'100%', 'margin-left': 0}, duration);
+        })
+        $('.gnb li').mouseout(function(){
+            $(this).find('span').stop()
+                .animate({'width':'0%', 'margin-left':'50%'}, duration);
+        })
+        
+    })    
+    </script>
+</head>
+<body>    
+    <header>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#"> 관람안내 </a><span></span></li>
+                <li><a href="#"> 관람예약/신청 </a><span></span></li>
+                <li><a href="#"> 미리보는 경복궁 </a><span></span></li>
+                <li><a href="#"> 경복궁 관리사무소 </a><span></span></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+
+
+

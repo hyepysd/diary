@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        body{ font-size:100px;}
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        
+        function cFunc(){
+             alert('클릭이 되었습니다.');
+        }
+        
+        $('button').click(function(){
+           cFunc();
+        })
+        
+        
+        $('span').click(function(){
+           cFunc();
+        })
+               
+    })
+    </script>
+</head>
+<body>
+    <button> 클릭하세요. </button>
+    <span> 클릭하세요.</span>
+</body>
+</html>
+
+
+
+

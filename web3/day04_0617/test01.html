@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>sideNavigation</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header, section, footer{ height: 1400px; }
+        header{ background-color: antiquewhite;}
+        section{ background-color:bisque;}
+        footer{ background-color:beige;}
+        .sideNavigation{ position: fixed; left:-300px; top:0; width: 300px; 
+            height: 100%; background-color: black; 
+            transition: all 0.3s ease-out; 
+        }
+        .sideNavigation>span{ position: absolute; right: 50px; top:30px;    font-size: 50px; background-color: transparent; color:white; 
+           border: none; cursor: pointer; display: block; padding: 15px;
+        }
+        header button{ padding: 10px; font-size: 20px; }
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+    $(function(){
+        $('header button').click(function(){
+            $('.sideNavigation').css({'left' : 0});
+        })
+        
+        $('.sideNavigation>span').click(function(){
+            $('.sideNavigation').css({'left' : -300 });
+        })
+    })
+    </script>
+</head>
+<body>
+    <header>
+        <button> slideNaviation </button>
+    </header>
+    <section></section>
+    <footer></footer>
+    <div class="sideNavigation"><span> &times; </span></div>
+</body>
+</html>
+
+
+
+
+
+

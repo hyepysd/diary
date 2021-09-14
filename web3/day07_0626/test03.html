@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>함수</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        body{ font-size:100px;}
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        /* ui : 배경색 애니 가능, 드래그앤드롭, ease등 가속 사용 */
+        /*// 유형2 : 실인수 유무와 상관없이, 리턴값을 사용하는 함수
+        function 이름( 변수1, 변수2 ...){
+            // 변수1개이상 사용할 수 있음 
+            // 처리할 내용 
+            
+            return 값;
+            // 값은 반드시 1개만 가능
+        }*/
+        
+        var num = 10; 
+        
+        function add( num ){
+            return 1000 + num ;             
+        }
+        
+        var value = add(num);  
+        $('body').append(value+'<br>');
+        
+        value = add(55);
+        $('body').append(value+'<br>');
+        
+        value = add( prompt('정수를 입력하세요') );
+        $('body').append(value+'<br>')
+        
+        /*선택자.show( 1000 )
+        선택자.css( 속성 , 값 )
+        선택자.css( 속성 : 값 , 속성 : 값 ....)
+        선택자.animate({ 속성 : 값 , 속성 : 값}, , ,  ....)*/
+    })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+

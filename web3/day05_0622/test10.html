@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .gnb li{ float:left; width: 200px; text-align: center;
+            margin-left:50px; 
+        } 
+        .gnb a{ display: block;  width: 100%; height: 40px;   line-height: 40px; background-color: purple; color:white; font-weight: bld; 
+        border-radius: 40px; position: relative; } 
+        
+        .gnb a:before{ content: ''; display: block; width: 20px; height: 20px; border-radius: 20px; background-color: purple; 
+            position: absolute; left:0; top:10px; 
+            transition: 0.3s; 
+        }
+        .gnb a:after{ content: ''; display: block; width: 20px; height: 20px; border-radius: 20px; background-color: purple; 
+            position: absolute; right:0; top:10px; 
+            transition: 0.3s; 
+        }
+        
+        .gnb a:hover:before{ left:-21px;  }
+        .gnb a:hover:after{ right:-21px;  }
+        /* :: css3 가상요소는 콜론을 2개 사용하기로 함 */
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/jquery.easing.1.3.js"></script>
+    <script>
+    $(function(){
+        var duration = 1000; 
+        var ease = 'easeOutSine';
+        
+        
+    })    
+    </script>
+</head>
+<body>    
+    <header>
+        <nav class="gnb">
+            <ul>
+                <li><a href="#"> 관람안내 </a></li>
+                <li><a href="#"> 관람예약/신청 </a></li>
+                <li><a href="#"> 미리보는 경복궁 </a></li>
+                <li><a href="#"> 경복궁 관리사무소 </a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+
+
+
+

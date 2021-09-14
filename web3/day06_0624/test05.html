@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:200px; height: 200px; 
+            background-color: blue; margin: 50px; float: left; 
+            position: relative; overflow: hidden; 
+        }
+        .caption{ display: block; width:200px; height: 200px;
+            background-color: orange; text-align: center; 
+            line-height: 200px; font-size: 22px;
+            position: absolute; 
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        $('div').eq(0).find('.caption').fadeOut();
+        $('div').eq(0).mouseover(function(){
+            $(this).find('.caption').fadeIn( 1000 );
+        })
+        $('div').eq(0).mouseout(function(){
+            $(this).find('.caption').fadeOut();
+        });
+        
+        $('div').eq(1).find('.caption').css({'bottom':'-200px'});
+        $('div').eq(1).mouseover(function(){
+            $(this).find('.caption').stop()
+                .animate({'bottom':'0'}, 500);
+        })
+        $('div').eq(1).mouseout(function(){
+            $(this).find('.caption').stop()
+                .animate({'bottom':'-200px'}, 500);
+        });  
+        
+        $('div').eq(2).find('.caption').css({'right':'-200px'});
+        $('div').eq(2).mouseover(function(){
+            $(this).find('.caption').stop()
+                .animate({'right':'0'}, 500);
+        })
+        $('div').eq(2).mouseout(function(){
+            $(this).find('.caption').stop()
+                .animate({'right':'-200px'}, 500);
+        });  
+        
+        $('div').eq(3).css({'transform-style':'preserve-3d',
+                            'perspective':'300px'})
+        $('div').eq(3).find('.caption').css({
+               'top':0, 'left':0, 
+                'transform-origin':'top', 'transform':'rotateX(180deg)', 'transition':'0.5s'});
+        $('div').eq(3).mouseover(function(){
+            $(this).find('.caption').stop()
+            .css({'transform':'rotateX(0)' }, 500)
+        })
+        $('div').eq(3).mouseout(function(){
+            $(this).find('.caption').stop()
+            .css({'transform':'rotateX(180deg)' }, 500)
+        })
+        
+    })
+    </script>
+</head>
+<body>
+    <div><span class="caption"> caption </span></div>
+    <div><span class="caption"> caption </span></div>
+    <div><span class="caption"> caption </span></div>
+    <div><span class="caption"> caption </span></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

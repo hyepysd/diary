@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{ width: 100px; height: 100px; 
+            background-color: orange; position: absolute; 
+            left: 0; 
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+    $(function(){
+        var n = 1; 
+        $('div').click(function(){
+            clearInterval(timer);
+            
+            $(this).stop().animate({ 'left':100*n}, 500);
+            n++;
+            num = n; // backup; 
+            if(n>5) n=0; 
+            
+            timer = setInterval( boxMove, 3000);
+        })
+        
+        var num=0; 
+        var timer = setInterval( boxMove, 2000);
+        function boxMove(){
+            $('div').stop().animate({ 'left':100*num}, 500);
+            
+            num++;
+            n = num; // backup
+            
+            if(num>5) num=0; 
+        }
+    })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+
+
+
+
+

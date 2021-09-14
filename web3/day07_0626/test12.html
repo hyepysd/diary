@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>시간제어</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        .tabPanel{ width:500px; margin: 50px; }
+        .tab li{ float:left; width:33%; height: 30px; 
+            text-align: center; line-height: 30px; 
+            background-color: antiquewhite; margin-right:0.3%;
+        }
+        
+        .content li{ clear: both; width:100%; height: 200px; 
+            box-sizing: border-box; border:1px solid black;
+            text-align: center; line-height: 200px;
+            font-size:50px; display: none; 
+        }
+        
+        .content li:nth-child(1){ display: block; }
+        .content li:nth-child(1){ background-color: salmon; }
+        .content li:nth-child(2){ background-color: skyblue; }
+        .content li:nth-child(3){ background-color: pink; }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){        
+       var n = 0; 
+       var timer = setInterval( tabClick, 3000);
+       var tabColor =['salmon','skyblue','pink'];
+        
+       function  tabClick(){
+           $('.tab li').css('background-color','antiquewhite');
+           $('.tab li').eq(n).css('background-color', tabColor[n]);
+                       
+           $('.content li').css('display','none');
+           $('.content li').eq(n).css('display','block');
+           n++;
+           //if( n>=3 ){ clearInterval( timer ); }
+           if( n>=3 ){ n = 0;  }
+       }
+        
+        $('.tab li').eq(0).click(function(){
+            $('.tab li').css('background-color','antiquewhite');
+            // 전체 탭색을 지정 
+            $(this).css('background-color','salmon');
+            // 클릭한 번호의 탭색을 지정 
+            
+            $('.content li').css('display','none');
+            $('.content li').eq(0).css('display','block');
+        })
+        $('.tab li').eq(1).click(function(){
+            $('.tab li').css('background-color','antiquewhite');
+            $(this).css('background-color','skyblue');
+            
+            $('.content li').css('display','none');
+            $('.content li').eq(1).css('display','block');
+        })
+        $('.tab li').eq(2).click(function(){
+            $('.tab li').css('background-color','antiquewhite');
+            $(this).css('background-color','pink');
+            
+            $('.content li').css('display','none');
+            $('.content li').eq(2).css('display','block');
+        })
+        
+    })
+    </script>
+</head>
+<body>
+    <section>
+        <div class="tabPanel">
+            <ul class="tab">
+                <li> 장려금 </li>
+                <li> 부가가치세 </li>
+                <li> 사업자등록 </li>
+            </ul>
+            <ul class="content">
+                <li> content1 </li>
+                <li> content2 </li>
+                <li> content3 </li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+

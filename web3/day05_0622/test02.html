@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{ width: 200px; height: 200px;
+            background-color: orange; 
+            position:absolute; left:50%;  margin-left:-100px; 
+            top:50%; margin-top:-100px; 
+        }
+        span{ display: block; 
+            background-color: purple; 
+            position: absolute; color:transparent; 
+        }
+        span:nth-child(1){ width:0px; height: 5px; 
+            left:0; top:0; 
+        }
+        span:nth-child(2){ width:5px; height: 0px; 
+            right:0; top:0; 
+        }
+        span:nth-child(3){ width:0px; height: 5px; 
+            right:0; bottom:0; 
+        }
+        span:nth-child(4){ width:5px; height: 0px; 
+            left:0px; bottom:0; 
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+    $(function(){
+        var duration = 200; 
+
+        $('div').mouseover(function(){
+            $('span').eq(0).animate({ 'width':'200px' }, duration, 'linear'
+            ); // topLine
+            $('span').eq(1).delay(duration*1).animate({ 'height':'200px' }, duration, 'linear'
+            ); // rightLine
+            $('span').eq(2).delay(duration*2).animate({ 'width':'200px' }, duration, 'linear'
+            ); // bottomLine
+            $('span').eq(3).delay(duration*3).animate({ 'height':'200px' }, duration, 'linear'
+            ); // leftLine
+            $('div').delay(duration*4).animate({ 'width':'500px', 'margin-left':'-250px' , 'margin-top':'-250px', 'height':'500px'}, duration );
+            
+            $('span').eq(0).delay(duration*4).animate({ 'width':'500px'});
+            $('span').eq(1).delay(duration*4).animate({ 'height':'500px'});
+            $('span').eq(2).delay(duration*4).animate({ 'width':'500px'});
+            $('span').eq(3).delay(duration*4).animate({ 'height':'500px'});
+        }) // mouseover end 
+    })
+    </script>
+</head>
+<body>
+    <div> BOX <span> top </span><span> right </span><span> bottom </span><span> bottom </span></div>
+</body>
+</html>
+
+
+
+
+
+

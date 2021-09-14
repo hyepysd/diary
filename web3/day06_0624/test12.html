@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:454px; height: 290px; 
+            margin: 50px; float: left; 
+            position: relative; overflow: hidden; 
+            background-image: url(images/img01.png);
+        }
+        span{ display: block; width:50%; height: 50%;
+             background-color: blue; float:left;
+             transform: scale(0); transition: 0.5s; 
+        } 
+        span:nth-child(1){ }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        $('div').hover(function(){
+            var duration = 300; 
+            $(this).find('span').css({'transform':'scale(1)'})
+        }, function(){
+            $(this).find('span').css({'transform':'scale(0)'})
+        })
+    })
+    </script>
+</head>
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

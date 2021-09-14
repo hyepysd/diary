@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animite</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:200px; height: 200px; 
+            background-color: blue; 
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        /* 3. jQueryUI 용도 : drag에 따라서 요소를 이동하여하는 동작등에 필요*/
+        $('div').animate({'background-color':'#f00'}, 1000, 'easeInOutElastic')
+                .animate({'background-color':'#0f0'}, 1000, 'easeInBack')
+                .animate({'background-color':'#0ff'}, 1000, 'easeInOutBack').draggable();
+               
+    })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

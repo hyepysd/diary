@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>sideNavigation</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header, section, footer{ height: 1400px; }
+        header{ background-color: antiquewhite;}
+        section{ background-color:bisque;}
+        footer{ background-color:beige;}
+        .sideNavigation{ position: fixed; left:0; top:0; width: 300px; 
+            height: 100%; background-color: black; 
+            display: none; 
+        }
+        .sideNavigation>span{ position: absolute; right: 50px; top:30px;    font-size: 50px; background-color: transparent; color:white; 
+           border: none; cursor: pointer; display: block; padding: 15px;
+        }
+        header button{ padding: 10px; font-size: 20px; }
+    </style>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script>
+    $(function(){
+        $('header button').click(function(){
+            //$('.sideNavigation').css({'display' : 'block'});
+            //$('.sideNavigation').show();
+            $('.sideNavigation').fadeIn();
+        })
+        
+        $('.sideNavigation>span').click(function(){
+            //$('.sideNavigation').css({'display' : 'none'});
+            //$('.sideNavigation').hide();
+            $('.sideNavigation').fadeOut();
+        })
+    })
+    </script>
+</head>
+<body>
+    <header>
+        <button> showHideNaviation </button>
+    </header>
+    <section></section>
+    <footer></footer>
+    <div class="sideNavigation"><span> &times; </span></div>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:454px; height: 290px; 
+            background-color: blue; margin: 50px; float: left; 
+            position: relative; overflow: hidden; 
+        }
+       
+        div:nth-child(1){ background-image: url(images/img02.png);}
+        div:nth-child(3){ background-image: url(images/img03.png);}
+        div:nth-child(4){ background-image: url(images/img04.png);}
+        
+        div span{ display: block; position: absolute; left:0; top:0; }
+        .shadow{ width:100%; height: 100%; 
+            box-shadow:inset 0 0 50px brown; opacity: 0; 
+        }
+        .sepia{ width:100%; height: 100%; 
+            background-color: orange; opacity: 0;  
+        }
+        
+        .caption{ width:100%; height: 70px; top:220px; left:-100%; } 
+        .captionBG{ background-color: rgba(0,0,0,0.5); 
+            width:100%; height: 70px; top:0; left:0; }
+        .text{ line-height: 70px; text-indent: 1em; 
+            font-size: 20px; width:100%; color:white;
+        }
+        
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        $('div').hover(function(){
+            $('.shadow').stop().animate({'opacity':1});
+            $('.sepia').stop().animate({'opacity':0.3});
+            $('.caption').stop().animate({'left':0});
+            console.log('mouseover')
+        }, function(){
+            $('.shadow').stop().animate({'opacity':0});
+            $('.sepia').stop().animate({'opacity':0});
+            $('.caption').stop().animate({'left': '-100%'});
+        })
+    })
+    </script>
+</head>
+<body>
+    <div>
+        <span class="sepia"></span>
+        <span class="shadow"></span>
+        <span class="caption"> 
+            <span class="captionBG"></span>
+            <span class="text"> cpation </span>
+        </span>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

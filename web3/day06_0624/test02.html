@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animite</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:200px; height: 200px; 
+            background-color: blue; 
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        /* .animate({'속성':'숫자'}, duration, ease, callback )*/
+        /* jQuery 를 사용는 두번째 이유 : animate 가속은 swing, linear이나 
+            jQueryUI를 사용하면 다양한 가속을 사용할 수 있다. 
+        */
+        $('div').animate({'background-color':'#f00'}, 1000, 'easeInOutElastic')
+                .animate({'background-color':'#0f0'}, 1000, 'easeInBack')
+                .animate({'background-color':'#0ff'}, 1000, 'easeInOutBack');
+               
+    })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

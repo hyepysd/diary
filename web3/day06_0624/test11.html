@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animate</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:454px; height: 290px; 
+            margin: 50px; float: left; 
+            position: relative; overflow: hidden; 
+            background-image: url(images/img01.png);
+        }
+        span{ display: block; width:25%; height: 0px; 
+             background-color: blue; top:50%; position: absolute; 
+        } 
+        span:nth-child(1){ left:0; }
+        span:nth-child(2){ left:25%; }
+        span:nth-child(3){ left:50%; }
+        span:nth-child(4){ left:75%; }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        $('div').hover(function(){
+            var duration = 300; 
+            
+            $(this).find('span').eq(0).stop()
+                .animate({'height':'290px', 'top':0}, duration);
+            
+            $(this).find('span').eq(1).stop().delay(duration)
+                .animate({'height':'290px', 'top':0}, duration);
+            
+            $(this).find('span').eq(2).stop().delay(duration*2)
+                .animate({'height':'290px', 'top':0}, duration);
+            
+            $(this).find('span').eq(3).stop().delay(duration*3)
+                .animate({'height':'290px', 'top':0}, duration);
+            
+        }, function(){
+            $(this).find('span').stop()
+            .animate({'height':'0px', 'top':'50%'}, 300);
+        })
+    })
+    </script>
+</head>
+<body>
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

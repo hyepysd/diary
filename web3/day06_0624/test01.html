@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>animite</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../js/jquery-ui.min.css">
+    <style>
+        div{ width:200px; height: 200px; 
+            background-color: blue; 
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script>
+    $(function(){
+        /* .animate({'속성':'숫자'}, duration, ease, callback )*/
+        /* jQuery 를 사용는 첫번째 이유 : 색상을 애니메이션 가능 */
+        $('div').animate({'background-color':'#f00'}, 1000)
+                .animate({'background-color':'#0f0'}, 1000)
+                .animate({'background-color':'#0ff'}, 1000);
+        /* jQuery는 고유색명을 인식하지 못하는 문제가 있음,
+           색을 사용할 때는 가능한 핵사코드표로 사용할 것
+        */       
+    })
+    </script>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

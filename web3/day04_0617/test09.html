@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>sideNavigation</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .container{ position: absolute;  width: 100%; left:0%; }
+        header, section, footer{ height:200px; 
+            font-size: 20px; 
+        }
+        header{ background-color: antiquewhite;}
+        section{ background-color:bisque;}
+        footer{ background-color:beige;}
+        
+        header li{ cursor: pointer; margin-bottom: 10px; }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+    $(function(){        
+        var $btn = $('header li'); 
+        $btn.eq(0).click(function(){
+            $('section').text('<img src="http://placehold.it/30x30" alt="더미이미지">')
+        })
+        
+        $btn.eq(1).click(function(){
+            $('section').html('<img src="http://placehold.it/130x130" alt="더미이미지">')
+        })
+        
+        $btn.eq(2).click(function(){
+            $('section').append('<img src="http://placehold.it/130x130" alt="더미이미지">')
+        })
+        
+        $btn.eq(3).click(function(){
+            $('section').prepend('<img src="http://placekitten.com/130/130" alt="더미이미지">')
+        })
+        
+        $btn.eq(4).click(function(){
+            $('section').remove();
+            // section자체를 삭제 
+        })
+        
+        $btn.eq(5).click(function(){
+            $('section').empty();
+            // section이 가진 내용을 삭제 
+        })   
+    })
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+               <ul>
+                   <li> text </li>
+                   <li> html </li>
+                   <li> append </li>
+                   <li> prepend </li>
+                   <li> remove </li>
+                   <li> empty </li>
+               </ul>
+        </header>
+        <section></section>
+        <footer></footer>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
