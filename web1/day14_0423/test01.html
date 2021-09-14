@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <style>
+        /* reset */
+        *{margin: 0; padding: 0;}
+        a{color: #333; text-decoration: none;}
+        li{list-style-type: none;}
+        img{border: none; vertical-align: middle;}
+        body{font-size: 12px; font-family: '나눔고딕'; color: #333; }
+    </style>
+    
+    <style>
+        #wrap{width: 930px; height: 1000px; margin: auto; }
+        
+        /*header*/
+        h1{font-size: 0; float: left;}
+        .gnb{float: right; }
+        .gnb li{float: left; }
+        .gnb a{display: block; padding: 40px 10px;}
+        
+        /*mainBenner*/
+        .mainBenner{clear: both; height: 422px; background-image: url(img/banner.png);}
+        .mainBenner h2{padding-left: 40px; padding-top: 10px; font-size: 23px;}
+        .mainBenner p{font-size: 30px; font-weight: bold;}
+        .mainBenner p:nth-of-type(1){font-size: 25px; font-weight: bold; color: #c60000; padding-left: 40px; padding-top: 100px; }
+        .mainBenner p:nth-of-type(2){padding-left: 75px; padding-top: 10px;}
+        .mainBenner p:nth-of-type(3){padding-left: 120px; }
+        
+        /*contents*/
+        .contents {width: 100%;}
+        .contents li{width: 31.333%; float: left; margin-left: 1.5%; margin-top: 15px;}
+        
+        /*lnb*/
+        
+        .lnb li{float: left;}
+        .lnb a{display: block; height: 72px; color: transparent;}
+        
+        .lnb li:nth-child(1) a{width: 194px; background-image: url(img/menuA_01.png);}
+        .lnb li:nth-child(2) a{width: 249px; background-image: url(img/menuA_02.png);}
+        .lnb li:nth-child(3) a{width: 235px; background-image: url(img/menuA_03.png);}
+        .lnb li:nth-child(4) a{width: 252px; background-image: url(img/menuA_04.png);}
+        /*hover*/
+        .lnb li:nth-child(1) a:hover{ background-image: url(img/menuB_01.png);}
+        .lnb li:nth-child(2) a:hover{ background-image: url(img/menuB_02.png);}
+        .lnb li:nth-child(3) a:hover{ background-image: url(img/menuB_03.png);}
+        .lnb li:nth-child(4) a:hover{ background-image: url(img/menuB_04.png);}
+        
+        /*footer*/
+        .footer{clear: both; width: 100%;}
+        .topUl li{float: left; padding: 20px 28px; text-align: center; }
+        .bottomUl{clear: both;}
+        .bottomUl img{float: left; margin-right: 25px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="header">
+            <h1>국민건강보험<img src="./img/logo.png" alt="국민건강보험"></h1>
+            <ul class="gnb">
+                <li><a href="#">처음으로</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">공인인증서안내</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div><!--class="header"-->
+        
+        <div class="mainBenner">
+            <h2>경영방침</h2>
+            <p>조직문화</p>
+            <p>우수성과 전문성을</p>
+            <p>갖춘자율과 창의의 조직</p>
+        </div><!--class="mainBenner"-->
+        
+        <div class="lnb">
+            <ul>
+                <li><a href="#">개인</a></li>
+                <li><a href="#">사업장</a></li>
+                <li><a href="#">요양기관</a></li>
+                <li><a href="#">장기요양기관</a></li>
+            </ul>
+        </div><!--class="lnb"-->
+        
+        <div class="contents">
+            <ul>
+                <li><img src="./img/img01.png" alt="건강in"></li>
+                <li><img src="./img/img02.png" alt="국민건강 알람서비스"></li>
+                <li><img src="./img/img03.png" alt="건강보험 보장성 강화대책"></li>
+            </ul>
+        </div><!--class="contents"-->
+        
+        <div class="footer">
+            <div class="topUl">
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">홈페이지 개선의견</a></li>
+                <li><a href="#">직원검색</a></li>
+                <li><a href="#">뷰어다운로드</a></li>
+                <li><a href="#">보안프로그램 장애해결</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">F W B</a></li>
+                
+            </div>
+            <div class="bottomUl">
+                <img src="./img/logo2.png" alt="평생건강">
+                <div class="address">
+                    굿잡아카데미컴퓨터아트학원 서울특별시 서초구 서초동 1309-8 KI타워 8층~9층<br>
+
+                    통신판매업번호: (주)굿잡아카데미 제 2017-서울서초-1213 호 l 사업자번호 : 745-88-00509 l 학원등록번호 : 학원등록번호 : 제12126호<br>
+
+                    TEL. 1588-8269 l FAX. 02-522-5540 l Email : privacy@koreaedugroup.com<br>
+
+                    대표자 : 엄진용 l 개인정보책임자 : 신희창 l 교육담당 : 엄진용<br>
+
+                    Copyright (C) 2015 goodjobart.com. All rights reserved.<br>
+                </div>
+            </div>
+        </div><!--class="footer"-->
+    </div> <!--id="wrap"-->
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
