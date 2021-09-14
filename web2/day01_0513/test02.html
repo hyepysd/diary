@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>시멘틱태그</title>
+    <style>
+		*{margin: 0; padding: 0;}
+		a{text-decoration: none; color: #333;}
+		li{list-style-type: none;}
+        header{width: 1200px; margin: auto; }
+        header:after{content: ''; display: block; clear: both;}
+        h1{float: left; padding: 20px 0px 0px 0px; font-size: 44px; font-family: 'Russo One', sans-serif;}
+        .gnb{float: right;}
+        .gnb li{float: left;}
+        .gnb a{display: block; padding: 10px;}
+        .gnb li:last-child a{display: block; padding-right: 0;}
+        .gnb a:hover{color: #9d5757;}
+        
+        .lnb{float: right; clear: both; margin-right: 300px;}
+        .lnb li{float: left;}
+        .lnb a{font-size: 14px; display: block; padding: 10px 20px;}
+        .lnb a:hover{background-color: #ededed; color: #777;}
+        
+        .bar{width: 100%; border-bottom: 1px solid #b7b7b7; padding: 5px 0px; margin-bottom: 20px;}
+        
+        .wrap{width: 1200px; margin: auto;}
+        section{width: 78%; float: left;}
+        article{font-size: 16px; 
+            line-height: 32px;/*행간*/ 
+            letter-spacing: 1px;/*자간*/ 
+            word-spacing: 3px;/*띄어쓰기*/
+            text-align: justify; margin-bottom: 30px; background-color: rosybrown; border-radius: 10px;}
+        
+        h2{float: left; margin-bottom: 15px; color: white; background-color: #9d5757; padding: 10px; border-radius:  0 15px 0 0; margin-left: 10px;}
+        more{float: right; cursor: pointer; /*마우스 올렸을 때 손가락모양*/}
+        more:hover{color: #9d5757; font-weight: 600;}
+        article>div{clear: both; padding: 16px; }
+        
+        aside{width: 20%; float: right;}
+        aside>label{display: block; width: 50%; float: left; text-align: center; padding: 20px 0px; background-color: rosybrown;}
+        aside>input{display: none;}
+        aside>input:nth-of-type(1):checked~label:nth-of-type(1){background-color: #9d5757; color: white;}
+        aside>input:nth-of-type(2):checked~label:nth-of-type(2){background-color: #9d5757; color: white;}
+        
+        aside>div{padding: 10px; clear: both; display: none; border: 1px solid #697060; }
+        /*원하는 탭메뉴 눌러서 보이게 하는것 */
+        aside>input:nth-of-type(1):checked~div:nth-of-type(1){display: block;}
+        aside>input:nth-of-type(2):checked~div:nth-of-type(2){display: block;}
+        
+        h3{padding: 20px 0px; color: #999; font-size: 16px;}
+        h3:before{content: ''; display: block; border: 1px solid #697060; width: 20px;}
+		
+        aside>div>p:nth-of-type(1){text-align: center; padding-top: 20px; font-size: 16px; color: #9d5757; font-weight: bold;}
+        
+        aside li a{display: block; width: 100%; background-color: rosybrown; color: white; height: 100px; text-align: center; font-size: 16px; line-height: 100px; border-radius: 10px; margin-bottom: 2px;}
+        
+        aside>div:nth-of-type(2) li a{background-color: rosybrown; color: white; }
+        aside>div:nth-of-type(2)>p:nth-of-type(1){color: #9d5757; }
+        
+        footer{clear: both; width: 100%; background-color: #9d5757; color: white; }
+        footer>nav{width: 1200px; margin: auto;}
+        footer>nav li{float: left;}
+        footer>nav li a{color: white; display: block; padding: 10px;}
+        footer>nav li a:after{content: '|'; display: inline-block; text-indent: 2.2em;}
+        footer>nav li:last-child a:after{content: '';}
+        footer>nav li:first-child a{padding-left: 0px;}
+        footer>nav li a:hover{color: #ababab;}
+        
+        
+        address{display: block; width: 1200px; margin: auto; clear: both; font-style: normal; line-height: 25px; padding-bottom: 33px;}
+    </style>
+     
+</head>
+
+<body>
+    <header>
+        <h1>Wisdom</h1>
+        <nav>
+            <ul class="gnb">
+               <li><a href="#">스터디룸</a></li>
+               <li><a href="#">수강료 조회</a></li>
+               <li><a href="#">온라인 상담</a></li>
+               <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="lnb">
+                <li><a href="#">아카데미 소개</a></li>
+                <li><a href="#">교육과정</a></li>
+                <li><a href="#">국비지원과정</a></li>
+                <li><a href="#">포토폴리오</a></li>
+                <li><a href="#">취업지원센터</a></li>
+                <li><a href="#">자격증정보</a></li>
+                <li><a href="#">실무자 특강</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bar">
+        
+    </div>
+    <div class="wrap">
+            <section>
+                <article>
+                    <h2>Contrary to popular belief,</h2> 
+                    <more> more </more>
+                    <div>
+                        Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                    </div>
+                </article>
+                <article>
+                    <h2>It is a long established</h2> 
+                    <more> more </more>
+                   <div>
+                        fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web 
+                   </div>
+                </article>
+                <article>
+                    <h2>The standard chunk</h2> 
+                    <more> more </more>
+                    <div>
+                        of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                    </div>
+                </article>
+            </section>
+            <aside>
+                <input type="radio" name="tab" id="tab01" checked>
+                <input type="radio" name="tab" id="tab02">
+                <label for="tab01"> 수강료 조회</label>
+                <label for="tab02"> 카톡상담</label>
+                <div>
+                   <p>수강료 조회</p>
+                    <h3>학과선택</h3>
+                    <ul>
+                        <li><a href="#">기본단과과정</a></li>
+                        <li><a href="#">취업정규과정</a></li>
+                        <li><a href="#">자격증과정</a></li>
+                    </ul>
+                    <h3>희망교육과정</h3>
+                    <p>위 학과선택에서 희망학과를 체크하시면 세부과목 선택이 가능합니다.</p>
+                </div>
+                <div>
+                   <p>카카오톡 상담신청</p>
+                    <h3>학과선택</h3>
+                    <ul>
+                        <li><a href="#">기본단과과정</a></li>
+                        <li><a href="#">취업정규과정</a></li>
+                        <li><a href="#">자격증과정</a></li>
+                    </ul>
+                    <h3>희망교육과정</h3>
+                    <p>위 학과선택에서 희망학과를 체크하시면 세부과목 선택이 가능합니다.</p>
+                </div>
+            </aside>
+        </div>
+    <footer>
+       <nav>
+           <ul>
+               <li><a href="#">아카데미 소개</a></li>
+               <li><a href="#">교육과정</a></li>
+               <li><a href="#">개인정보처리방침</a></li>
+               <li><a href="#">산학협력 현황</a></li>
+               <li><a href="#">수강료안내</a></li>
+               <li><a href="#">교육상담센터</a></li>
+               <li><a href="#">온라인결제</a></li>
+               <li><a href="#">오시는 길</a></li>
+           </ul>
+       </nav>
+        <address> 
+        굿잡아카데미컴퓨터아트학원 서울특별시 서초구 서초동 1309-8 KI타워 8층~9층 <br>
+        통신판매업번호: (주)굿잡아카데미 제 2017-서울서초-1213 호 l 사업자번호 : 745-88-00509 l 학원등록번호 : 학원등록번호 : 제12126호 <br>
+        TEL. 1588-8269 l FAX. 02-522-5540 l Email : privacy@koreaedugroup.com <br>
+        대표자 : 엄진용 l 개인정보책임자 : 신희창 l 교육담당 : 굿잡아카데미컴퓨터아트학원
+        Copyright (C) 2015 goodjobart.com. All rights reserved.
+   </address> 
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
