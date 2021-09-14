@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{color: #333; text-decoration: none;}
+        li{list-style-type: none;}
+        img{border: none; vertical-align: middle;}
+        body{font-size: 12px; font-family: '나눔고딕';}
+        
+        div{width: 300px; height: 300px;}
+        .outer{background-color: #9492d1; padding: 100px 50px 30px 10px; margin: 100px 50px 30px 10px;}
+        .inner{background-color: #a5441d; opacity: 0.5;}
+        /* margin: 100px 0 0 0;*/
+        /*margin은 top,bottom이 겹침현상 발생으로 주의해서 사용할것*/
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner"> HAPPY </div>
+    </div>
+    <div>
+        .outer width는 div의 너비 : 300 + 10 + 30 + 50 +10 : 400px가 된다. <br>
+        .outer height는 div의 너비 : 300 + 100 + 30 + 50 + 10 : 590px가 된다. <br><br>
+        
+        * 박스모델
+        block 속성의 태그들은 너비와 높이를 지정하고 padding과 margin을 사용하는데 실제 block 속성의 태그의 너비와 높이는 위의 계산법을 사용한다. <br>
+        박스의 테두리도 지정할 수 있고 테두리두께가 있다면 테두리의 두께도 박스의 너비와 높이에 포함된다.
+    </div>
+</body>
+</html>

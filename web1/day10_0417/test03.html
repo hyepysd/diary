@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼태그2</title>
+</head>
+<body>
+   <!--브라우저마다 디자인이 다름-->
+   
+    <form action="test01.html">
+         <!--name을 동일하게 정하면 같은 name 중 하나만 체크 됨-->
+      <fieldset>
+         <legend>지혜가 먹고 싶은 점심은 ?</legend>
+          <input type="radio" name="lunch" id="food1" checked> <label for="food1">서브웨이</label> <br>
+          <input type="radio" name="lunch" id="food2"> <label for="food2">맘스터치</label> <br>
+          <input type="radio" name="lunch" id="food3"> <label for="food3">마라탕</label> <br><br>
+      </fieldset>
+      
+      <fieldset>
+         <legend>성별 선택하삼</legend>
+          <input type="radio"  for="gender" id="femail" checked><label for="femail">여자</label>
+          <input type="radio"  for="gender" id="mail"><label for="mail">남자</label>
+      </fieldset>
+    </form>
+    <!--
+         웹접근성에 적합한 페이지 만들기
+         사용성을 증가하기 위하여
+         radio 나 checkbox는 작은 버튼을 클릭하는 불편함을 해소해야함
+         label을 이용하여 버튼을 직접 클릭하지 않아도 버튼을 클릭한 것 과 같은 효과를 줌
+    -->
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
