@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header{ position: fixed; top:50px; left: 50px; }
+        header li{ float: left; padding: 20px  30px; 
+            background-color: skyblue; margin-right: 2px; 
+        }
+        section{ position: relative; width:3200px; height: 400px; background-color: pink; 
+            left:50px; top:130px; 
+        }
+        section>div{ width: 800px; height: 300px; float:left; 
+            margin: 50px; 
+            background-color: purple; 
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+    $(function(){
+         $('section').stop()
+            .animate({ 'left' : -2000})
+        
+        $('.lnb li').click(function(){
+            var n = $(this).index();
+            // $(window).scrollLeft( n*800 )
+            $('section').stop()
+            .animate({ 'left' : n*-800})
+        })
+        
+        /* 세로 스크롤을 가로스크로이 움직이는 것처럼 변형시켜 사용할 수 있음 */
+    })
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="lnb">
+            <ul>
+                <li>MENU01</li>
+                <li>MENU02</li>
+                <li>MENU03</li>
+                <li>MENU04</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+    <footer></footer>
+</body>
+</html>

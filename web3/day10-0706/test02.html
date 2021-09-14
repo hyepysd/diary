@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        header{ width:100%; height: 70px; 
+            background-color: black; 
+            position: fixed; top:0; left:0; 
+        }
+        .lnb{ width:1200px; margin: auto; }
+        .lnb li{ float:left; font-size:24px; }
+        .lnb a{ display: block; width:300px; line-height: 70px; 
+                color:white; text-align: center; 
+        }
+        section{ width:1200px; margin: auto; height: 1000px;  }
+        section:nth-of-type(1){ background-color: red;
+            margin-top:70px; 
+        }
+        section:nth-of-type(2){ background-color: green;
+            height: 930px; 
+        }
+        section:nth-of-type(3){ background-color: blue; 
+            height: 1030px; 
+        }
+        section:nth-of-type(4){ background-color: yellow; }
+        footer{ width:100%; height: 100px; }
+        footer button{ width:100%; height: 100px; font-size: 22px; 
+            border:none; background-color:bisque; 
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        $(window).scroll(function(){
+            var st = $(window).scrollTop();
+            //var st = $(this).scrollTop();
+            console.log(st);
+        })
+        
+        /*var st01 = $('section').eq(0).offset().top;
+        var st02 = $('section').eq(1).offset().top;
+        var st03 = $('section').eq(2).offset().top;
+        var st04 = $('section').eq(3).offset().top;
+        console.log('section = '+ st01);
+        console.log('section = '+ st02);
+        console.log('section = '+ st03);
+        console.log('section = '+ st04);*/
+        
+        $('section').each(function(){
+            // 반복제어하는 기술로 section을 모두 확인하는 반복 loop 기술 
+            var st = $(this).offset().top;
+            var n = $(this).index();
+            console.log('section '+ n + ' = '+ st);
+        })
+    })
+    </script>
+</head>
+<body>
+   <header>
+       <nav class="lnb">
+           <ul>
+               <li><a href="#">red</a></li>
+               <li><a href="#">green</a></li>
+               <li><a href="#">blue</a></li>
+               <li><a href="#">yellow</a></li>
+           </ul>
+       </nav>
+   </header>
+   <section data-color="red">
+       <h1>HELLO jQuery!</h1>
+       <img src="./images/ha_item01.jpg" alt="">
+   </section>
+   <section data-color="green">
+       <h1>Hello HTML!</h1>
+       <img src="./images/ha_item02.jpg" alt="">
+   </section>
+   <section data-color="blue">
+       <h1>Hello CSS3!</h1>
+       <img src="./images/ha_item03.jpg" alt="">
+   </section>
+   <section data-color="yellow">
+       <h1>Hello JavaScript!</h1>
+       <img src="./images/ha_item01.jpg" alt="">
+   </section> 
+  
+   <footer>
+       <button> TOP </button>
+   </footer> 
+      
+        
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>숫자 상승 카운트</title>
+    <style>
+        .number {
+          font-size: 100px;
+          list-style: none;
+          text-align: center;
+          margin-top: 50px;
+          color: #333;
+          border-radius: 50%;
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(function() {
+		  var cnt0 = 0;
+
+		  counterFn();
+
+		  function counterFn() {
+
+		    id0 = setInterval(count0Fn, 100);
+
+		    function count0Fn() {
+		      cnt0++;
+		      if (cnt0 > 22) {
+		        clearInterval(id0);
+		      } else {
+		        $(".number").text(cnt0);
+		      }
+		    }
+		  }
+		});
+    </script>
+</head>
+<body>
+    <div>
+      <ul>
+        <li class="number"></li>
+      </ul>
+    </div>
+</body>
+</html>
