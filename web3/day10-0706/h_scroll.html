@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>가로페럴렉싱</title>
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        body {
+            height: 8610px;
+            width: 100%;
+            background-color: rgba(0, 0, 255, 0.44);
+        }
+
+        section{
+            width: 20000px;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        section>div {
+            width: 1910px;
+            height: 100%;
+            float: left;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            font-size: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        #box1 {
+            background-color: gray;
+        }
+
+        #box2 {
+            background-color: #aaaaaa;
+        }
+
+        #box3 {
+            background-color: gray;
+        }
+
+        #box4{
+            background-color: #aaaaaa;
+        }
+
+        #box5 {
+            background-color: gray;
+        }
+
+        header {
+            position: fixed;
+            left: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        header a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            background-color: gold;
+            margin: 15px 0px;
+        }
+        a.on {
+            background-color: indianred;
+        }
+    </style>
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/jquery.mousewheel.min.js"></script>
+    <script>
+        $(function(){
+            $('html,body').stop().animate({'scrollTop': 0 },200);
+            $('header div li').eq(0).find('a').addClass('on');
+            
+            $(window).scroll(function(){
+                var st = $(this).scrollTop();
+                 $('section').stop().animate({ 'left': -st }, 500);
+                 $('header a').click(function(){
+
+
+                 var n = $(this).parent().index();
+                 var sectionLeft = $('section>div').eq(n).position().left; 
+                // offset() : 현재 나의 위치를 기준 
+                // position() : 나의 부모로부터의 위치를 기준 
+
+                 $('section').stop().animate({ 'left': -sectionLeft }, 1000);
+
+                 $('header a').removeClass('on');
+                 $('header li').eq(n).find('a').addClass('on');
+                   // 현재 사용하고 있는 섹션에 해당하는 메뉴를 색칠 
+                // var w =  new WOW().init(); 
+             }) 
+        ``})         
+        })
+    </script>
+</head>
+
+<body>
+    <section>
+        <div id="box1">
+            
+        </div>
+        <div id="box2">
+            
+        </div>
+        <div id="box3">
+            
+        </div>
+        <div id="box4">
+            
+        </div>
+        <div id="box5">
+            
+        </div>
+    </section>
+    <header>
+        <div>
+            <li><a href="#box1"></a></li>
+            <li><a href="#box2"></a></li>
+            <li><a href="#box3"></a></li>
+            <li><a href="#box4"></a></li>
+            <li><a href="#box5"></a></li>
+        </div>
+    </header>
+</body>
+</html>
