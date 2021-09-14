@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>filter</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        div{ width:200px; height: 200px; float:left; 
+            margin: 20px;
+        }
+        li{ float:left; padding: 20px; border:1px solid black; 
+            margin-left: 20px; 
+        }
+        ul:after{ content: ''; display: block;  clear: left; }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        $('div').each(function(){
+            var c = $(this).attr('data-color');
+            console.log(c);
+            $(this).css('background-color',c);
+        })
+                
+        $('.btn li').click(function(){
+            var colorText = $(this).text();
+            // 클릭된 버튼의 텍스트를 가져온다. 
+            
+            $('div').each(function(){
+                // div:first-child~div:last-child까지 순회(검사)
+                
+                var sText = $(this).attr('data-color');
+                // div의 data-color을 가져온다. 
+                
+                if( colorText=='ALL'){
+                    // 버튼의 텍스트가 all인경우 모든 div을 표시
+                    $(this).fadeIn();
+                    
+                }else if( colorText == sText ){
+                    $(this).fadeIn();
+                    // 버튼의 칼라와 div속성의 칼라가 같은 것만 표시
+                }else{ 
+                    $(this).fadeOut();
+                    // 버튼의 칼라와 div속성의 칼라가 다르면 숨김
+                }
+            })
+        })
+    })
+    </script>
+</head>
+<body>
+    <section>
+        <ul class="btn">
+            <li>RED</li>
+            <li>GREEN</li>
+            <li>BLUE</li>
+            <li>CYAN</li>
+            <li>MAGENTA</li>
+            <li>YELLOW</li>
+            <li>BLACK</li>
+            <li>ALL</li>
+        </ul>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="MAGENTA"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="RED"></div>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="MAGENTA"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="RED"></div>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="MAGENTA"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="RED"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="CYAN"></div>
+        <div data-color="RED"></div>
+        <div data-color="BLACK"></div>
+        <div data-color="BLUE"></div>
+        <div data-color="GREEN"></div>
+        <div data-color="RED"></div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

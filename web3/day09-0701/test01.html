@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>attr</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+    
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(function(){
+        /*.css({ 속성, 값}) : style 속성을 다루는 메소드
+        .attr({ 속성, 값})  : html, 태그의 속성을 다루는 메소드 */
+        $('img').mouseover(function(){
+            $(this).attr({'src':"./images/ha_mainimg02.jpg"});
+            $(this).attr({'alt':"해남반시고구마"});
+            $(this).attr({'title':"감미료 무첨가한 간식"});
+        })
+    })
+    </script>
+</head>
+<body>
+    
+    <img src="./images/ha_mainimg01.jpg" alt="고구마" >
+</body>
+</html>
+
+
+
+
+
+
+
+
